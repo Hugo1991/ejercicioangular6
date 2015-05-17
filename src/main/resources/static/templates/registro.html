@@ -1,0 +1,68 @@
+<html >
+    <head>
+        <--!Incluir css -->
+    </head>
+    <body>
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 text">
+                            <h3>Entra con tu cuenta</h3>
+                            <form role="form" action="#" method="post" enctype="plain">
+                                <div class="form-group">
+				                    <label for="name1">Tu DNI:</label>
+				                    <input type="DNI" name="DNI" class="form-control" id="inputDNI" placeholder="Tu DNI" ng-model="Usuario.dni" required>
+				                </div>
+                                <div class="form-group">
+                                    <label for="email1">Contrase&ntildea:</label>
+				                    <input type="pass" name="pass" class="form-control" id="inputPassword" placeholder="Introduce pass" ng-model="Usuario.password"  required>
+				                    <div ng-show="forma.inputDNI.$dirty && forma.inputPassword.$invalid">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="aceptoU" ng-model="usuario.acepto" required>Acepto.
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-large btn-success" ng-disabled="forma.$invalid">ENTRAR</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-5 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>¿Eres cliente de InSane?</h3>
+                            		<p>Adte cliente:</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-pencil"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form" action="" method="post" class="registration-form">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-first-name">Nombre</label>
+			                        	<input type="text" name="form-first-name" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-last-name">Apellidos</label>
+			                        	<input type="text" name="form-last-name" placeholder="Apellidos..." class="form-last-name form-control" id="form-last-name">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-email">Email</label>
+			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                                    </div>
+			                        <button type="submit" class="btn">Registrarse!</button>
+                                    <span class="li-social">
+								        <button  class="btn btn-success"><i class="fa fa-facebook"></i></button>
+                                    </span>
+			                    </form>
+		                    </div>
+                        </div>                    
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
