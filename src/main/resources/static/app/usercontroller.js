@@ -1,22 +1,22 @@
 angular.module("app").controller("UserController", UserController);
 
-UserController.$inject = ["blogManager", "$routeParams", "$location", "LxNotificationService"];
+UserController.$inject = ["usuarioManager", "$routeParams", "$location", "LxNotificationService"];
 
-function UserController(blogManager, $routeParams, $location, LxNotificationService) {
+function UserController(usuarioManager, $routeParams, $location, LxNotificationService) {
 
 	var vm = this;
 	
 	//View model properties
 	
-	vm.user = {};
+	vm.usuario = {};
 		
 	//Controller logic
 	
-	vm.user = blogManager.getUser($routeParams.id);
+	vm.usuario = usuarioManager.getUsuario($routeParams.id);
 
 	//Controller actions
 	
-	vm.deleteUser = function(user) {
+	vm.deleteUsuario = function(usuario) {
 		
 		LxNotificationService.confirm('Delete confirmation',
 				'Are you sure you want to delete this post?', 
@@ -24,7 +24,7 @@ function UserController(blogManager, $routeParams, $location, LxNotificationServ
 				function(answer)
 		        {
 		            if(answer === true){
-		            	blogManager.deleteUser(user);
+		            	usuarioManager.deleteUsuario(usuario);
 		        		$location.path("/");		            	
 		            }					
 		        });

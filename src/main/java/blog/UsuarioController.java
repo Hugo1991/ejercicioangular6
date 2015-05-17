@@ -14,21 +14,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/usuarios")
-
 public class UsuarioController {
 	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Usuario> anadirUsuario(@RequestBody Usuario usuario) {
+	public ResponseEntity<Usuario> addUsuario(@RequestBody Usuario usuario) {
 		usuarioRepository.save(usuario);		
 		return new ResponseEntity<>(usuario,HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void borrarUsuario(@PathVariable Integer id) {
-		usuarioRepository.delete(id);
+	public void borrarUsuario(@PathVariable Long dni) {
+		usuarioRepository.delete(dni);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET)
@@ -36,7 +35,7 @@ public class UsuarioController {
 		return usuarioRepository.findAll();
 	}
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Usuario mostrarUsuario(@PathVariable int id) {
+	public Usuario mostrarUsuario(@PathVariable Long id) {
 		return usuarioRepository.findOne(id);
 	}
 

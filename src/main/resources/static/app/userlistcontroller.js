@@ -1,6 +1,6 @@
 angular.module("app").controller("UserListController", UserListController);
 
-PostListController.$inject = ["usuarioManager", "$location"];
+UserListController.$inject = ["usuarioManager", "$location"];
 
 function UserListController(usuarioManager, $location) {
 
@@ -12,16 +12,16 @@ function UserListController(usuarioManager, $location) {
 		
 	//Controller logic
 	
-	vm.usuarios = blogManager.getUsuarios();
+	vm.usuarios = usuarioManager.getUsuarios();
 	
 	//Controller actions
 
-	vm.deletePost = function(usuario) {
+	vm.deleteUsuario = function(usuario) {
 		usuarioManager.deleteUsuario(usuario);
 	};
 	
 	vm.viewUsuario = function(usuario) {
-		$location.path("/usuario");
+		$location.path("/");
 	};
 	
 	vm.reload = function(post) {

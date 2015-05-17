@@ -25,15 +25,15 @@ function usuarioManager($resource, $timeout) {
 		reload : reload,
 		getUsuarios : getUsuarios,
 		getUsuario : getUsuario,		
-		nuevoUsuario: nuevoUsuario,
+		newUsuario: newUsuario,
 		updateUsuario : updateUsuario,
 		deleteUsuario : deleteUsuario
 	}
 
 	function reload(){
-		var promise = UsuarioResource.query(function(nuevosUsuarios){
-			posts.length = 0;
-			posts.push.apply(usuarios, nuevosUsuarios);
+		var promise = UsuarioResource.query(function(newUsuarios){
+			usuarios.length = 0;
+			usuarios.push.apply(usuarios, newUsuarios);
 		}).$promise;
 		return promise;
 	}
@@ -50,8 +50,8 @@ function usuarioManager($resource, $timeout) {
 		}
 	}
 
-	function nuevoUsuario(nuevoUsuario) {
-		new UsuarioResource(nuevoUsuario).$save(function(usuario) {
+	function newUsuario(newUsuario) {
+		new UsuarioResource(newUsuario).$save(function(usuario) {
 			usuarios.push(usuario);
 		});
 	}
