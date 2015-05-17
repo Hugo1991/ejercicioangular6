@@ -4,19 +4,19 @@ UserController.$inject = ["blogManager", "$routeParams", "$location", "LxNotific
 
 function UserController(blogManager, $routeParams, $location, LxNotificationService) {
 
-	var um = this;
+	var vm = this;
 	
 	//View model properties
 	
-	um.user = {};
+	vm.user = {};
 		
 	//Controller logic
 	
-	um.user = blogManager.getUser($routeParams.id);
+	vm.user = blogManager.getUser($routeParams.id);
 
 	//Controller actions
 	
-	um.deleteUser = function(user) {
+	vm.deleteUser = function(user) {
 		
 		LxNotificationService.confirm('Delete confirmation',
 				'Are you sure you want to delete this post?', 

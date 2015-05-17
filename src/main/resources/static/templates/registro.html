@@ -1,4 +1,4 @@
-<div class="top-content" ng-controller="UserController as vm">
+<div class="top-content" ng-controller="NewUserController as vm">
             <div class="inner-bg">
                 <div class="container">
                     <div class="row">
@@ -34,18 +34,18 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="registration-form">
+			                    <form role="form" ng-submit="vm.nuevoUsuario(vm.nuevoUsuario) class="registration-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-first-name">Nombre</label>
-			                        	<input type="text" name="form-first-name" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
+			                        	<input type="text" name="form-first-name" ng-model="vm.nuevoUsuario.nombre" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-last-name">Apellidos</label>
-			                        	<input type="text" name="form-last-name" placeholder="Apellidos..." class="form-last-name form-control" id="form-last-name">
+			                        	<input type="text" name="form-last-name" ng-model="vm.nuevoUsuario.apellidos" placeholder="Apellidos..." class="form-last-name form-control" id="form-last-name">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-email">Email</label>
-			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+			                        	<input type="text" name="form-email" ng-model="vm.nuevoUsuario.email" placeholder="Email..." class="form-email form-control" id="form-email">
                                     </div>
 			                        <button type="submit" class="btn">Registrarse!</button>
                                     <span class="li-social">
