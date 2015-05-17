@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   
+    
+
+   
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+
+    <!-- Fixed navbar -->
+	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><b>NoInsane</b></a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home" class="smothscroll">Home</a></li>
+  		            <li style="float:right;"><a href="#login" >Login</a></li>
+  		           <li style="float:right;"><a href="#registro"data-toggle="modal" >Registro</a></li>
+  		
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+            
+            </br></br></br>
+      <div id="cita" style="align:center;">     
+    Hola hijo de puta</br>  c  <h3> Concerta tu cita</h3>
+<form method="POST">
+Selecciona tu fecha <input type="date" name="fecha"></br></br>
+Selecciona especialista;
+<select>
+    <option selected>Elije especialidad</option>
+  <option value="pediatra">Pediatra</option>
+  <option value="alergeno">Alergeno</option>
+  <option value="cirujano">Cirujano</option>
+  <option value="dentista" >Dentista</option>
+</select>
+
+</br></br>
+Selecciona hospital;
+<select>
+    <option selected>Elije hospital</option>
+  <option value="mostoles">Hospital de Mostoles</option>
+  <option value="urjc">Hospital universitario URJC</option>
+  <option value="12octubre">Hospital 12 de Octubre</option>
+  <option value="gregorio" >Hospital Gregorio Marañon</option>
+</select></br></br>
+   <button id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
+            
+</form>
+</div> 
+	
+  </body>
+</html>
