@@ -1,32 +1,32 @@
-angular.module("app").controller("PostListController", PostListController);
+angular.module("app").controller("UserListController", UserListController);
 
-PostListController.$inject = ["blogManager", "$location"];
+PostListController.$inject = ["usuarioManager", "$location"];
 
-function PostListController(blogManager, $location) {
+function UserListController(usuarioManager, $location) {
 
 	var vm = this;
 	
 	//View model properties
 	
-	vm.posts = []
+	vm.usuarios = []
 		
 	//Controller logic
 	
-	vm.posts = blogManager.getPosts();
+	vm.usuarios = blogManager.getUsuarios();
 	
 	//Controller actions
 
-	vm.deletePost = function(post) {
-		blogManager.deletePost(post);
+	vm.deletePost = function(usuario) {
+		usuarioManager.deleteUsuario(usuario);
 	};
 	
-	vm.viewPost = function(post) {
-		$location.path("/post");
+	vm.viewUsuario = function(usuario) {
+		$location.path("/usuario");
 	};
 	
 	vm.reload = function(post) {
-		blogManager.reload().then(function(posts){
-			vm.posts = posts;
+		usuarioManager.reload().then(function(usuarios){
+			vm.usuarios = usuarios;
 		});
 	};
 };
