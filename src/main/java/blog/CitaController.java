@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-package blog;
-=======
+
 /*package blog;
->>>>>>> origin/master
+
 
 import java.util.List;
 
@@ -26,12 +24,11 @@ public class CitaController {
 	private CitaRepository citaRepository;
 
 
-=======
 	
 	@Autowired
 	private CitaRepository citaRepository;
 	
->>>>>>> origin/master
+
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
 		citaRepository.save(cita);		
@@ -50,11 +47,7 @@ public class CitaController {
 	public Cita mostrarCita(@PathVariable Long id) {
 		return citaRepository.findOne(id);
 	}
-<<<<<<< HEAD
-	*/
-}
-=======
 
-}*/
->>>>>>> origin/master
+	*/
+
 

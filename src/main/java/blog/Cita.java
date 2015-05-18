@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 package blog;
 /*
-=======
-/*package blog;
-
->>>>>>> origin/master
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -57,9 +52,6 @@ public class Cita {
 		return medico;
 	}
 	
-<<<<<<< HEAD
+
 }
 */
-=======
-}*/
->>>>>>> origin/master
