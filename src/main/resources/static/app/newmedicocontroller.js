@@ -2,7 +2,7 @@ angular.module("app").controller("NewMedicoController", NewMedicoController);
 
 NewMedicoController.$inject = ["medicoManager", "$location"];
 
-function NewMedicoController(usuarioManager, $location) {
+function NewMedicoController(medicoManager, $location) {
 
 	var mm = this;
 	var a=true;
