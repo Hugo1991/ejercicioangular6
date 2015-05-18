@@ -42,40 +42,29 @@
 	      </div>
 	    </div>
             
-      </br></br>
-            
-            <table class="table table-striped">
-                <thead>
-                <TR> 
-                    <TH>#</TH> 
-                   <TH>Cabereca 1</TH> 
-                   <TH>Cabereca 2</TH> 
-                   <TH>Cabereca 3</TH> 
-                </TR> 
-                    </thead>
-                <TR> 
-                    <TD>1</TD>
-                   <TD>Dato </TD> 
-                   <TD>Dato </TD> 
-                   <TD>Dato </TD> 
-                </TR> 
-                <TR>
-                    <TD>2</TD>
-                   <TD>Dato </TD> 
-                   <TD>Dato </TD> 
-                   <TD>Dato </TD> 
-                </TR> 
-                <TR>
-                    <TD>3</TD>
-                   <TD>Dato </TD> 
-                   <TD>Dato </TD> 
-                   <TD>Dato </TD> 
-                </TR>
-  ...
-            </table>
-       
-            
+            </br></br></br>
+      <div ng-controller="NewPostController as vm" id="cita" style="align:center;">     
+    chupame la polla y haz un mejor diseño no con br no me jodas</br>  c  <h3> Concerta tu cita</h3>
+<form ng-submit="vm.addCita(vm.newCita)>
+Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita"  name="fecha"></br></br>
 
+
+</br></br>
+Selecciona hospital;
+<select ng-model="vm.newCita.hospital" >
+    <option selected>Elije hospital</option>
+  	<option ng-repeat="hospital in vm.hospitales" value={{hospital}}>{{hospital.nombre}}</option>
+</select></br></br>
+
+Selecciona especialista;
+<select ng-model="vm.newCita.medico">
+    <option selected>Elije especialidad</option>
+  <option ng-repeat="medico in vm.medicos" value={{medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
+</select>
+   <button id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
+            
+</form>
+</div> 
 	
   </body>
 </html>

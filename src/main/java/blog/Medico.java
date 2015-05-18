@@ -15,14 +15,15 @@ public class Medico {
 	private long nColegiado;
 	private String nombre;
 	private String apellidos;
+	private String especialidad;
 	public Medico() {
 	}
 
-	public Medico(Long nColegiado,String nombre, String apellidos) {
+	public Medico(Long nColegiado,String nombre, String apellidos,String especialidad) {
 		setNumeroColegiado(nColegiado);
 		setNombre(nombre);
 		setApellidos(apellidos);
-		
+		setEspecialidad(especialidad);
 	}
 	public Long getNumeroColegiado(){
 		return nColegiado;
@@ -38,6 +39,9 @@ public class Medico {
 		this.nombre = nombre;
 	}
 
+	public void setEspecialidad(String especialidad){
+		this.especialidad=especialidad;
+	}
 	public String getApellidos() {
 		return apellidos;
 	}
