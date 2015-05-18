@@ -122,3 +122,215 @@ button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none
 button.btn:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }
 
 button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }
+
+
+/**cabecera**/
+nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+
+ol,ul{list-style:none;margin:0;padding:0;}
+
+.float-rt{float:right;}/* float right */
+
+.clear{clear:both;}/* clear float */
+
+body {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	background:#ebebeb;
+}
+.wrap {
+	width:80%;
+	margin: 0 auto;
+	transition:all .2s linear;
+	-moz-transition:all .2s linear;/* firefox */
+	-webkit-transition:all .2s linear; /* safari and chrome */
+	-o-transition:all .2s linear; /* opera */
+	-ms-transition:all .2s linear;
+}
+.header {
+	background:#23272a;
+	padding:20px 0;
+}
+.header_top {
+	padding-bottom:25px;
+}
+.logo {
+	float: left;
+}
+.header_top_right{
+	float:right;
+	padding-top:10px;
+}
+.search_box span{
+   color:#5b5b5b;
+   margin-right:10px;
+}
+.search_box form{
+	 background:#151719;
+	 position: relative;
+	 display:inline-block;
+	 padding-left:18px;
+}
+.search_box form:after{
+	content:'';
+	position:absolute;
+	left:0;
+	border-width:18px 0px 18px 18px;
+	border-style:solid;
+	border-color:rgba(255, 0, 0, 0) rgba(0, 0, 255, 0) rgba(0, 128, 0, 0) #23272a;
+}
+.search_box form input[type="text"] {
+	border: none;
+	outline: none;
+	background: none;
+	font-size:0.85em;
+	color: #acacac;
+	width:75%;
+	padding:10px;
+	-webkit-apperance:none;
+	margin:0;
+}
+.search_box form input[type="submit"] {
+	border: none;
+	cursor: pointer;
+	background: url(assets/img/search.png) no-repeat center;
+	display:inline-block;
+	width:24px;
+	height:24px;
+	vertical-align:middle;
+	outline:none;
+	padding:0;
+}
+/** Navegador **/
+.navigation{
+	background:#e44f2b;
+	padding:5px 0;
+	position:relative;
+}
+.navigation span.left-ribbon{
+	position: absolute;
+	left: -40px;
+	top: 8px;
+	width: 40px;
+	height:60px;
+	background: url(assets/img/left-fold.png) no-repeat;
+	}
+.navigation span.right-ribbon{
+	position: absolute;
+	right: -40px;
+	top: 8px;
+	width: 40px;
+	height:60px;
+	background: url(assets/img/right-fold.png) no-repeat;
+}
+
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+    width:11em;
+}
+.nav a {
+    padding:16px 33px;
+    color:#ffb29f;
+    border-top:1px solid #DB3C15;
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.nav a:hover {
+	color:#FFF;
+}
+.nav li {
+    position: relative;
+}
+.nav > li {
+    float: left;
+}
+.nav > li:first-child,.nav > li:last-child {
+	background-image:none;
+}
+.nav > li {
+    background-image: url("assets/img/line-divider.png");
+    background-repeat: no-repeat;
+    background-position:left;
+}
+.nav > li > a {
+    display: block;
+}
+.nav li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.nav > li.hover > ul {
+    left: 0;
+}
+.nav li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.nav li li a {
+    display: block;
+    background:#EA5E3C;
+    position: relative;
+    z-index:100;
+    border-top:1px solid #EF7A5D;
+    padding:10px;
+    font-size:15px;
+}
+.nav li li a:hover {
+	  background:#DB502E;
+}
+.nav li li li a {
+    background:#ED6A4A;
+    z-index:200;
+    border-top:1px solid #EF7A5D;
+}
+
+
+.header_bottom{
+	padding:6%  0 2%;
+}
+.slider-text{
+	float:left;
+	width:50%;
+}
+.slider-text h2{
+	color:#e44f2b;
+	font-size:40px;
+}
+.slider-text p{
+	color:#8fa7ae;
+	font-size:20px;
+	margin:20px 0;
+}
+
+
+@media only screen and (max-width: 1366px) {
+	.wrap{
+		width:90%;
+	}
+}
+
+.nav li  a:hover {
+background:#FF69B4;
+list-style:none;
+text-decoration:none;
+color: #000;
+
+}
+.nav li:hover > ul {
+	display:block;
+    color: black;
+}
+.nav li a:hover {
+list-style:none;
+text-decoration:none;
+}
+/**fin cabecera**/
