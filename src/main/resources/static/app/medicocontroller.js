@@ -4,19 +4,19 @@ MedicoController.$inject = ["medicoManager", "$routeParams", "$location", "LxNot
 
 function MedicoController(medicoManager, $routeParams, $location, LxNotificationService) {
 
-	var vm = this;
+	var mm = this;
 	
 	//View model properties
 	
-	vm.medico = {};
+	mm.medico = {};
 		
 	//Controller logic
 	
-	vm.medico = medicoManager.getMedico($routeParams.id);
+	mm.medico = medicoManager.getMedico($routeParams.id);
 
 	//Controller actions
 	
-	vm.deleteMedico = function(medico) {
+	mm.deleteMedico = function(medico) {
 		
 		LxNotificationService.confirm('Delete confirmation',
 				'Are you sure you want to delete this post?', 
@@ -25,7 +25,7 @@ function MedicoController(medicoManager, $routeParams, $location, LxNotification
 		        {
 		            if(answer === true){
 		            	medicoManager.deleteMedico(medico);
-		        		$location.path("/listamedicos");		            	
+		        		$location.path("/");		            	
 		            }					
 		        });
 	};

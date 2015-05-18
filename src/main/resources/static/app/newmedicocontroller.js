@@ -2,21 +2,21 @@ angular.module("app").controller("NewMedicoController", NewMedicoController);
 
 NewMedicoController.$inject = ["medicoManager", "$location"];
 
-function NewMedicoController(usuarioManager, $location) {
+function NewMedicoController(medicoManager, $location) {
 
-	var vm = this;
+	var mm = this;
 	var a=true;
 	//View model properties
 	
-	vm.newMedico = {};
+	mm.newMedico = {};
 	
 	//Controller actions
 
-	vm.addMedico = function(newMedico) {
+	mm.addMedico = function(newMedico) {
 		
-		medicoManager.newUsuario(newMedico);
+		medicoManager.newMedico(newMedico);
 		
-		vm.newMedico = {};
+		mm.newMedico = {};
 		$location.path("/");
 	};
 };

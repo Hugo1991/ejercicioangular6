@@ -1,4 +1,4 @@
-<div class="top-content" ng-controller="NewMedicoController as vm">
+<div class="top-content" ng-controller="NewMedicoController as mm">
     <!-- Fixed navbar -->
 	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
 	      <div class="container">
@@ -39,31 +39,29 @@ Introduce la localidad:<input type="text" style="width: 17%;"class="form-control
 </form>
 
 <div class="form-bottom">
-			                    <form ng-submit="vm.addMedico(vm.newMedico)" class="registration-form">
+			                    <form ng-submit="mm.addMedico(mm.newMedico)" class="registration-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-first-name" label="nombre">Nombre</label>
-			                        	<input type="text" name="form-first-name" ng-model="vm.newMedico.nombre" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
+			                        	<input type="text" name="form-first-name" ng-model="mm.newMedico.nombre" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-last-name" label="apellidos">Apellidos</label>
-			                        	<input type="text" name="form-last-name" ng-model="vm.newMedico.apellidos" placeholder="Apellidos..." class="form-last-name form-control" id="form-last-name">
+			                        	<input type="text" name="form-last-name" ng-model="mm.newMedico.apellidos" placeholder="Apellidos..." class="form-last-name form-control" id="form-last-name">
 			                        </div>
 			                       
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-email">Número de colegiados</label>
-			                        	<input type="text" name="form-email" ng-model="vm.newMedico.nColegiado" placeholder="Email..." class="form-email form-control" id="form-email">
+			                        	<input type="text" name="form-email" ng-model="mm.newMedico.nColegiado" placeholder="Email..." class="form-email form-control" id="form-email">
                                     </div>
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-first-name" label="DNI">Especialidad</label>
-			                        	<input type="text" name="form-dni" ng-model="vm.newMedico.especialidad" placeholder="DNI..." class="form-first-name form-control" id="form-first-name">
+			                        	<input type="text" name="form-dni" ng-model="mm.newMedico.especialidad" placeholder="DNI..." class="form-first-name form-control" id="form-first-name">
 			                        </div>
                                    
 			                        <button type="submit" class="btn">Registrarse!</button>
-                                    <span class="li-social">
-								        <button  class="btn btn-success"><i class="fa fa-facebook"></i></button>
-								        {{vm.registrado}}
-                                    </span>
-			                    </form>
+			                        </form>
+                                   
+			                    
 		                    </div>
 </div> 
 	

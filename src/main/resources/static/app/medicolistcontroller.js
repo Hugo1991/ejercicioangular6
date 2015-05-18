@@ -23,8 +23,9 @@ function MedicoListController(medicoManager, $location) {
 	mm.viewMedico = function(medico) {
 		$location.path("/");
 	};
-	
+
 	mm.reload = function(post) {
+
 		medicoManager.reload().then(function(medicos){
 			mm.medicos = medicos;
 		});
