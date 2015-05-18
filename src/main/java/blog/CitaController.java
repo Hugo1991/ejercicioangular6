@@ -47,6 +47,7 @@ public class CitaController {
 	public Cita mostrarCita(@PathVariable Long id) {
 		return citaRepository.findOne(id);
 	}
+}
 
 	*/
 
