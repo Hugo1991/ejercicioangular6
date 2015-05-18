@@ -43,7 +43,7 @@
 	    </div>
             
             </br></br></br>
-      <div ng-controller="NewPostController as vm" id="cita" style="align:center;">     
+      <div ng-controller="NewCitaController as vm" id="cita" style="align:center;">     
     chupame la polla y haz un mejor diseño no con br no me jodas</br>  c  <h3> Concerta tu cita</h3>
 <form ng-submit="vm.addCita(vm.newCita)>
 Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita"  name="fecha"></br></br>
@@ -51,15 +51,19 @@ Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita"  name="fe
 
 </br></br>
 Selecciona hospital;
+<div ng-controller="HospitalListController as hm">
 <select ng-model="vm.newCita.hospital" >
     <option selected>Elije hospital</option>
-  	<option ng-repeat="hospital in vm.hospitales" value={{hospital}}>{{hospital.nombre}}</option>
+  	<option ng-repeat="hospital in hm.hospitales" value={{hospital}}>{{hospital.nombre}}</option>
 </select></br></br>
+</div>
+
 
 Selecciona especialista;
+<div ng-controller="MedicoListController as mm">
 <select ng-model="vm.newCita.medico">
     <option selected>Elije especialidad</option>
-  <option ng-repeat="medico in vm.medicos" value={{medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
+  <option ng-repeat="medico in mm.medicos" value={{medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
 </select>
    <button id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
             

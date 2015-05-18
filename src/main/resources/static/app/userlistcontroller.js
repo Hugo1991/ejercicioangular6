@@ -24,7 +24,7 @@ function UserListController(usuarioManager, $location) {
 		$location.path("/");
 	};
 	
-	vm.reload = function(post) {
+	vm.reload = function(usuario) {
 		usuarioManager.reload().then(function(usuarios){
 			vm.usuarios = usuarios;
 		});

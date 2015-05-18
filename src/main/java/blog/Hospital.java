@@ -45,6 +45,7 @@ public class Hospital {
 	public void setMedico(Medico medico){
 		this.medicos.add(medico);
 	}
+	
 	public ArrayList<Medico> getMedicos(){
 		return medicos;
 	}
