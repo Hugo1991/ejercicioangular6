@@ -9,24 +9,27 @@ import javax.persistence.Id;
 @Entity
 public class Usuario {
 	
-	@Id	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
 	private long DNI;
 	private String nombre;
 	private String apellidos;
-	private Date fechaNac;
+	private String fechaNac;
 	private String email;
 	private String pass;
 	
 	public Usuario(){}
-	public Usuario(long dni,String nombre,String apellidos,Date fecha,String email,String pass){
-		setDNI(dni);
+	public Usuario(String nombre,String apellidos,String fecha,String email,long dni,String pass){
+		setDNI(DNI);
 		setNombre(nombre);
 		setApellidos(apellidos);
 		setFechaNac(fecha);
 		setEmail(email);
 		setPass(pass);
 	}
-	public void setDNI(long dni){
+	public void setDNI(Long dni){
 		this.DNI=dni;
 	}
 	public void setNombre(String nombre){
@@ -35,7 +38,7 @@ public class Usuario {
 	public void setApellidos(String apellidos){
 		this.apellidos=apellidos;
 	}
-	public void setFechaNac(Date fecha){
+	public void setFechaNac(String fecha){
 		this.fechaNac=fecha;
 	}
 	public void setEmail(String email){
@@ -44,7 +47,7 @@ public class Usuario {
 	public void setPass(String pass){
 		this.pass=pass;
 	}
-	public Long getDNI(){
+	public long getDNI(){
 		return DNI;
 	}
 	public String getNombre(){
@@ -53,8 +56,11 @@ public class Usuario {
 	public String getApellidos(){
 		return apellidos;
 	}
-	public Date getFechaNac(){
+	public String getFechaNac(){
 		return fechaNac;
+	}
+	public String getEmail(){
+		return email;
 	}
 	public String getPass(){
 		return pass;
