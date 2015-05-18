@@ -1,4 +1,4 @@
-/*package blog;
+package blog;
 
 import java.util.List;
 
@@ -39,5 +39,5 @@ public class CitaController {
 		return citaRepository.findOne(id);
 	}
 
-}*/
+}
 

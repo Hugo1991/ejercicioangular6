@@ -1,4 +1,4 @@
-/*package blog;
+package blog;
 
 import java.util.Date;
 
@@ -48,4 +48,4 @@ public class Cita {
 		return medico;
 	}
 	
-}*/
+}
