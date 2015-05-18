@@ -17,6 +17,6 @@ function NewUserController(usuarioManager, $location) {
 		usuarioManager.newUsuario(newUsuario);
 		
 		vm.newUsuario = {};
-		$location.path("/");
+		$location.path("/usuario");
 	};
 };
