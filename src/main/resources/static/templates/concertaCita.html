@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-   
-    
-
-   
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    
-   
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    
-
-  </head>
-
-  <body data-spy="scroll" data-offset="0" data-target="#navigation">
-
-    <!-- Fixed navbar -->
+<div ng-app>
 	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
 	      <div class="container">
 	        <div class="navbar-header">
@@ -29,14 +7,14 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#"><b>NoInsane</b></a>
+	          <a class="navbar-brand" href="#/"><b>NoInsane</b></a>
 	        </div>
 	        <div class="navbar-collapse collapse">
 	          
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#home" class="smothscroll">Home</a></li>
-  		            <li style="float:right;"><a href="#login" >Login</a></li>
-  		           <li style="float:right;"><a href="#registro"data-toggle="modal" >Registro</a></li>
+                    <li class="active"><a href="#/" class="smothscroll">Home</a></li>
+  		            <li style="float:right;"><a href="#/" >Login</a></li>
+  		           <li style="float:right;"><a href="#/registro" data-toggle="modal" >Registro</a></li>
   		
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -45,30 +23,28 @@
             </br></br></br>
       <div ng-controller="NewCitaController as vm" id="cita" style="align:center;">     
     chupame la polla y haz un mejor diseño no con br no me jodas</br>  c  <h3> Concerta tu cita</h3>
-<form ng-submit="vm.addCita(vm.newCita)>
-Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita"  name="fecha"></br></br>
-
-
-</br></br>
-Selecciona hospital;
-<div ng-controller="HospitalListController as hm">
-<select ng-model="vm.newCita.hospital" >
-    <option selected>Elije hospital</option>
-  	<option ng-repeat="hospital in hm.hospitales" value={{hospital}}>{{hospital.nombre}}</option>
-</select></br></br>
+		<form ng-submit="vm.addCita(vm.newCita)>
+		Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita"  name="fecha"></br></br>
+		
+		
+		</br></br>
+		Selecciona hospital;
+		<div ng-controller="HospitalListController as hm">
+		<select ng-model="vm.newCita.hospital" >
+		    <option selected>Elije hospital</option>
+		  	<option ng-repeat="hospital in hm.hospitales" value={{hospital}}>{{hospital.nombre}}</option>
+		</select></br></br>
+		</div>
+		
+		
+		Selecciona especialista;
+		<div ng-controller="MedicoListController as mm">
+		<select ng-model="vm.newCita.medico">
+		    <option selected>Elije especialidad</option>
+		  <option ng-repeat="medico in mm.medicos" value={{medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
+		</select>
+		   <button id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
+		            
+		</form>
+		</div> 
 </div>
-
-
-Selecciona especialista;
-<div ng-controller="MedicoListController as mm">
-<select ng-model="vm.newCita.medico">
-    <option selected>Elije especialidad</option>
-  <option ng-repeat="medico in mm.medicos" value={{medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
-</select>
-   <button id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
-            
-</form>
-</div> 
-	
-  </body>
-</html>

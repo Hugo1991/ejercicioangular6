@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/citas")
 
 public class CitaController {
-	
+	/*
 	@Autowired
 	private CitaRepository citaRepository;
-	
+
+
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
 		citaRepository.save(cita);		
@@ -38,6 +39,6 @@ public class CitaController {
 	public Cita mostrarCita(@PathVariable Long id) {
 		return citaRepository.findOne(id);
 	}
-
+	*/
 }
 
