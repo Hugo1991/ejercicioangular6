@@ -23,6 +23,8 @@ public class DataBaseUsage implements CommandLineRunner {
 		 // save a couple of customers
         hospitales.save(new Hospital("ramon y cajal","ramon y cajal","Madrid","España",915765456));
         medicos.save(new Medico(918276l, "Doctor florencio", "Magdalenas Martinez", "Doctorcito Malcorazon"));
+        medicos.save(new Medico(100276l, "Doctor Down", "de carrito", "dentista"));
+
         usuarios.save(new Usuario("hugo", "fernnandez", "02-02-1991", "hugofernandezvisier@gmail.com", 49100755l, "123456789"));
         // fetch all customers
         Iterable<Hospital> hospital = hospitales.findAll();

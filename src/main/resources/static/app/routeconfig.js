@@ -8,11 +8,12 @@ function RouteConfig($routeProvider) {
 	$routeProvider.when('/registro', { templateUrl : "templates/registro.html" });
 
 	$routeProvider.when('/listamedicos', { templateUrl : "templates/listamedicos.html" });
-	$routeProvider.when('/listahospitales', { templateUrl : "templates/listaHospitales.html" });
+	$routeProvider.when('/listaHospitales', { templateUrl : "templates/listaHospitales.html" });
 	$routeProvider.when('/postlist', { templateUrl : "templates/postlist.html" });
 	$routeProvider.when('/formularioshospitalmedicos', { templateUrl : "templates/formularioshospitalmedicos.html" });
-
-	$routeProvider.when('/usuario', { templateUrl : "templates/usuario.html" });
+	
+	$routeProvider.when('/listausuarios', { templateUrl : "templates/listausuarios.html" });
+	$routeProvider.when('/usuario/:id', { templateUrl : "templates/usuario.html" });
 	$routeProvider.when('/citas', { templateUrl : "templates/citas.html" });
 	$routeProvider.when('/post/:id', { templateUrl : "templates/post.html" });
 	
