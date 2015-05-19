@@ -16,6 +16,9 @@ public class DataBaseUsage implements CommandLineRunner {
 	private MedicoRepository medicos;
 	
 	@Autowired
+	private CitaRepository citas;
+	
+	@Autowired
 	private UsuarioRepository usuarios;
 	@Override
 	public void run(String... args) throws Exception {
@@ -24,6 +27,7 @@ public class DataBaseUsage implements CommandLineRunner {
         hospitales.save(new Hospital("ramon y cajal","ramon y cajal","Madrid","España",915765456));
         medicos.save(new Medico(918276l, "Doctor florencio", "Magdalenas Martinez", "Doctorcito Malcorazon"));
         medicos.save(new Medico(100276l, "Doctor Down", "de carrito", "dentista"));
+        citas.save(new Cita());
 
         usuarios.save(new Usuario("hugo", "fernnandez", "02-02-1991", "hugofernandezvisier@gmail.com", 49100755l, "123456789"));
         // fetch all customers
@@ -41,6 +45,11 @@ public class DataBaseUsage implements CommandLineRunner {
         for (Medico customer : medico) {
             System.out.println(customer.getNombre());
         }
-        
+        Iterable<Cita> cita = citas.findAll();
+        System.out.println("Customers found with findAll():");
+        System.out.println("-------------------------------");
+        for (Cita customer : cita) {
+            System.out.println(customer.getUsuario());
+        }
 	}
 }

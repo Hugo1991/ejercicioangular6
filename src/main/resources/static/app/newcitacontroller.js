@@ -2,7 +2,7 @@ angular.module("app").controller("NewCitaController", NewCitaController);
 
 NewCitaController.$inject = ["citaManager", "$location"];
 
-function NewUserController(citaManager, $location) {
+function NewCitaController(citaManager, $location) {
 
 	var vm = this;
 	var a=true;

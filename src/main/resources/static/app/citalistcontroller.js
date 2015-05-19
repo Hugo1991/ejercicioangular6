@@ -24,7 +24,7 @@ function CitaListController(citaManager, $location) {
 		$location.path("/cita");
 	};
 	
-	vm.reload = function(post) {
+	vm.reload = function(cita) {
 		citaManager.reload().then(function(citas){
 			vm.citas = citas;
 		});

@@ -1,31 +1,357 @@
-<div ng-app>
-	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="#/"><b>NoInsane</b></a>
-	        </div>
-	        <div class="navbar-collapse collapse">
-	          
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#/" class="smothscroll">Home</a></li>
-  		           <li style="float:right;"><a href="#/registro" data-toggle="modal" >Registro</a></li>
-  		
-	        </div><!--/.nav-collapse -->
-	      </div>
-	    </div>
-	   <a href="#/" > <IMG SRC="img/hospital2.gif"></img></a>
-	    <a href="#/listamedicos" ><IMG SRC="img/medico1.png"></img></a>
-	    <a href="#/usuario" ><IMG SRC="img/Usuarios2.jpg"></img></a>
-	    <a href="#/usuario" ><IMG SRC="img/cita2.png"></img></a>
+<div id="pag" ng-app>
+    <div class="header">
+        <div class="wrap">
+            <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#/"><b>NoInsane</b></a>
+                    </div>
+                    <div class="navbar-collapse collapse">
 
-			 
-			  <div class="modal-footer"> 
-			  	<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
-			  	</div> </form>
-			  	</div> </div> </div>
-</div>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#/" class="smothscroll">Home</a>
+                            </li>
+                            <li style="float:right;">
+                                <button class="btn" data-toggle="modal" data-target="#popupregistro">Login</button>
+                            </li>
+                            <li style="float:right;"><a href="#/registro" data-toggle="modal">Registro</a>
+                            </li>
+
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+
+
+
+            <div class="header_top">
+
+                <div class="header_top_right">
+                    <div class="search_box">
+                        <span>Buscar</span>
+                        <form>
+                            <input type="text" value="">
+                            <input type="submit" value="">
+                        </form>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <script type="text/javascript">
+                function mostrarUsuarios() {
+
+                    document.getElementById('medicos').style.display = 'none';
+                    document.getElementById('hospitales').style.display = 'none';
+                    document.getElementById('citas').style.display = 'none';
+
+                    document.getElementById('usuarios').style.display = 'block';
+                }
+
+                function mostrarMedicos() {
+
+                    document.getElementById('usuarios').style.display = 'none';
+                    document.getElementById('hospitales').style.display = 'none';
+                    document.getElementById('citas').style.display = 'none';
+
+                    document.getElementById('medicos').style.display = 'block';
+                }
+
+                function mostrarHospitales() {
+
+                    document.getElementById('usuarios').style.display = 'none';
+                    document.getElementById('medicos').style.display = 'none';
+                    document.getElementById('citas').style.display = 'none';
+
+
+                    document.getElementById('hospitales').style.display = 'block';
+                }
+
+                function mostrarCitas() {
+
+                    document.getElementById('usuarios').style.display = 'none';
+                    document.getElementById('medicos').style.display = 'none';
+                    document.getElementById('hospitales').style.display = 'none';
+
+
+                    document.getElementById('citas').style.display = 'block';
+                }
+            </script>
+
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <li><a href=""><span  id ="icono1"class=""><i class="icon "></i></span>asdsdsd</a>
+                        </li>
+
+                        >
+                        <li><a href=""><span  class=""><i class="icon "></i></span>asdsdsd</a>
+                        </li>
+                        <li><a href=""><span class=""><i class="icon "></i></span>asdsdsd</a>
+                        </li>
+                        
+                       
+                        <li><a href=""><span class=""><i class="icon "></i></span>Acciones administrativas</a>
+                            <ul>
+                                <li onClick="mostrarUsuarios()"><a href="">Lista de usuarios</a></li>
+                                <li onClick="mostrarMedicos()"><a href="">Lista de m&eacutedicos</a></li>
+                                <li onClick="mostrarHospitales()"><a href="">Lista de hospitales</a></li>
+                                <li onClick="mostrarCitas()"><a href="">Lista de citas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+                <span class="left-ribbon"><img src="assets/img/left-fold.png"/> </span>
+                <span class="right-ribbon"><img src="assets/img/right-fold.png"/> </span>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="popupregistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+                        </button>
+                    </div>
+                    <div class="container" id="conten">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                                <h1 class="text-center login-title">Entra con tu cuenta</h1>
+                                <div class="account-wall">
+                                    <img class="profile-img" src="img/login.png" alt="">
+                                    <form class="form-signin">
+                                        <input type="text" id="inputemail" class="form-control" placeholder="Email" required>
+                                        <input type="password" class="form-control" placeholder="Password" required>
+                                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                            Entrar</button>
+                                        <label class="checkbox pull-left">
+                                            <input type="checkbox" value="remember-me"> Recuerdame
+                                        </label>
+                                        <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                                    </form>
+                                </div>
+                                <a href="#" class="text-center new-account">Create una cuenta </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="cuerpo">
+
+        <div id="usuarios" style="display:none;" ng-controller="UserListController as vm" layout="column" layout-fill>
+
+
+
+            <div class="content">
+
+                <div id="new-blog-button">
+                    <a href="#/registro" class="btn btn--xl btn--red btn--fab" lx-ripple>
+                        <i class="mdi mdi--add"></i>
+                    </a>
+                </div>
+
+                <div ng-hide="vm.usuarios && vm.usuarios.length > 0" style="margin:20px">There are no posts yet.</div>
+
+                <ul class="list">
+                    <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="usuario in vm.usuarios">
+                        <a href="/#/usuario/{{usuario.nombre}}">
+                            <div class="list-primary-tile">
+                                <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
+                            </div>
+                            <div class="list-content-tile list-content-tile--two-lines">
+
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <TR>
+                                            <TH>#</TH>
+                                            <TH>Nombre</TH>
+                                            <TH>Apellidos</TH>
+                                            <TH>Fecha de nacimiento</TH>
+                                            <TH>Correo electr&oacutenico</TH>
+                                            <TH>Contrase&ntildea</TH>
+                                        </TR>
+                                    </thead>
+                                    <TR>
+                                        <TD>{{usuario.id}}</TD>
+                                        <TD>{{usuario.nombre}}</TD>
+                                        <TD>{{usuario.apellidos}}</TD>
+                                        <TD>{{usuario.fechaNac}}</TD>
+                                        <TD>{{usuario.email}}</TD>
+                                        <TD>{{usuario.pass}}</TD>
+                                    </TR>
+                                </table>
+                        </a>
+                        <button type="submit" ng-click="vm.deleteUsuario(vm.usuario)" class="btn">Borrar</button>
+
+                        </div>
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="medicos" style="display:none;" ng-controller="MedicoListController as mm" layout="column" layout-fill>
+
+
+
+            <div class="content">
+
+                <div id="new-blog-button">
+                    <a href="#/newpost" class="btn btn--xl btn--red btn--fab" lx-ripple>
+                        <i class="mdi mdi--add"></i>
+                    </a>
+                </div>
+
+                <div ng-hide="mm.medicos && mm.medicos.length > 0" style="margin:20px">There are no posts yet.</div>
+
+
+                <ul class="list">
+                    <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="medico in mm.medicos">
+                        <a href="/#/medico/{{medico.idMedico}}">
+                            <div class="list-primary-tile">
+                                <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
+                            </div>
+                            <div class="list-content-tile list-content-tile--two-lines">
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <TR>
+                                            <TH>#</TH>
+                                            <TH>Nombre</TH>
+                                            <TH>Apellidos</TH>
+                                            <TH>N&uacutemero de colegiado</TH>
+                                            <TH>Especialidad</TH>
+                                        </TR>
+                                    </thead>
+                                    <TR>
+                                        <TD>{{medico.idMedico}}</TD>
+                                        <TD>{{medico.nColegiado}}</TD>
+                                        <TD>{{medico.nombre}}</TD>
+                                        <TD>{{medico.apellidos}}</TD>
+                                        <TD>{{medico.especialidad}}</TD>
+                                    </TR>
+                                </table>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+        <div id="hospitales" style="display:none;" ng-controller="HospitalListController as vm" layout="column" layout-fill>
+
+            <div class="content">
+
+                <div id="new-blog-button">
+                    <a href="#/newpost" class="btn btn--xl btn--red btn--fab" lx-ripple>
+                        <i class="mdi mdi--add"></i>
+                    </a>
+                </div>
+
+                <div ng-hide="vm.hospitales && vm.hospitales.length > 0" style="margin:20px">There are no posts yet.</div>
+
+                <ul class="list">
+                    <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="hospital in vm.hospitales">
+                        <a href="/#/post/{{post.id}}">
+                            <div class="list-primary-tile">
+                                <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
+                            </div>
+                            <div class="list-content-tile list-content-tile--two-lines">
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <TR>
+                                            <TH>#</TH>
+                                            <TH>Nombre</TH>
+                                            <TH>Calle</TH>
+                                            <TH>Poblaci&oacuten</TH>
+                                            <TH>Pa&iacutes</TH>
+                                            <TH>N&uacutemero de tel&eacutefono</TH>
+                                        </TR>
+                                    </thead>
+                                    <TR>
+                                        <TD>{{hospital.idHospital}}</TD>
+                                        <TD>{{hospital.nombre}}</TD>
+                                        <TD>{{hospital.calle}}</TD>
+                                        <TD>{{hospital.poblacion}}</TD>
+                                        <TD>{{hospital.pais}}</TD>
+                                        <TD>{{hospital.nTelefono}}</TD>
+                                    </TR>
+                                </table>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="citas" style="display:none;" ng-controller="CitaListController as vm" layout="column" layout-fill>
+
+
+
+            <div class="content">
+
+                <div id="new-blog-button">
+                    <a href="#/registro" class="btn btn--xl btn--red btn--fab" lx-ripple>
+                        <i class="mdi mdi--add"></i>
+                    </a>
+                </div>
+
+                <div ng-hide="vm.citas && vm.citas.length > 0" style="margin:20px">There are no posts yet.</div>
+
+                <ul class="list">
+                    <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="usuario in vm.usuarios">
+                        <a href="/#/cita/{{cita.nombre}}">
+                            <div class="list-primary-tile">
+                                <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
+                            </div>
+                            <div class="list-content-tile list-content-tile--two-lines">
+
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <TR>
+                                            <TH>#</TH>
+                                            <TH>Usuario</TH>
+                                            <TH>Medico</TH>
+                                            <TH>Contrase&ntildea</TH>
+                                        </TR>
+                                    </thead>
+                                    <TR>
+                                        <TD>{{cita.id}}</TD>
+                                        <TD>{{cita.usuario}}</TD>
+                                        <TD>{{cita.medico}}</TD>
+                                        <TD>{{cita.hospital}}</TD>
+                                        
+                                    </TR>
+                                </table>
+                        </a>
+                        <button type="submit" ng-click="vm.deleteCita(vm.cita)" class="btn">Borrar</button>
+
+                        </div>
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+
