@@ -56,7 +56,7 @@ function citaManager($resource, $timeout) {
 		});
 	}
 
-	function updateUsuario(updatedCita) {
+	function updateCita(updatedCita) {
 		updatedCita.$update();
 	}
 

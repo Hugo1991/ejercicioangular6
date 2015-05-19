@@ -4,7 +4,7 @@ citaManager.$inject = [ "$resource", "$timeout" ];
 
 function hospitalManager($resource, $timeout) {
 
-	var CitaResource = $resource('/citas/:id', {
+	var CitaResource = $resource('/hospitales/:id', {
 		id : '@id'
 	}, {
 		update : {
@@ -23,46 +23,46 @@ function hospitalManager($resource, $timeout) {
 	
 	return {
 		reload : reload,
-		getCitas : getCitas,
-		getCita : getCita,		
-		newCita: newCita,
-		updateCita : updateCita,
-		deleteCita : deleteCita
+		getHospitales : getHospitales,
+		getHospital : getHospital,		
+		newHospital: newHospital,
+		updateHospital : updateHospital,
+		deleteHospital : deleteHospital
 	}
 
 	function reload(){
 		var promise = CitaResource.query(function(newCitas){
-			citas.length = 0;
-			citas.push.apply(citas, newCitas);
+			hospitales.length = 0;
+			hospitales.push.apply(hospitales, newHospitales);
 		}).$promise;
 		return promise;
 	}
 	
-	function getCitas() {
-		return citas;
+	function getHospitales() {
+		return hospitales;
 	}
 
-	function getCita(id) {
-		for (var i = 0; i < citas.length; i++) {
-			if (citas[i].id.toString() === id) {
-				return citas[i];
+	function getHospital(id) {
+		for (var i = 0; i < hospitales.length; i++) {
+			if (hospitales[i].id.toString() === id) {
+				return hospitales[i];
 			}
 		}
 	}
 
-	function newCita(newCita) {
-		new CitaResource(newCita).$save(function(cita) {
-			citas.push(cita);
+	function newHospital(newHospital) {
+		new HospitalResource(newHospital).$save(function(hospital) {
+			hospitales.push(hospital);
 		});
 	}
 
-	function updateUsuario(updatedCita) {
-		updatedCita.$update();
+	function updateHospital(updatedHospital) {
+		updatedHospital.$update();
 	}
 
-	function deleteCita(cita) {
-		cita.$remove(function() {
-			citas.splice(citas.indexOf(cita), 1);
+	function deleteHospital(hospital) {
+		hospital.$remove(function() {
+			hospitales.splice(hospitales.indexOf(hospital), 1);
 		});
 	}	
 }

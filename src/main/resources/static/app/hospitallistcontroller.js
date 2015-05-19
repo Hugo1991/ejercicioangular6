@@ -16,7 +16,7 @@ function HospitalListController(hospitalManager, $location) {
 	
 	//Controller actions
 
-	hm.deleteUsuario = function(hospital) {
+	hm.deleteHospital = function(hospital) {
 		hospitalManager.deleteHospital(hospital);
 	};
 	

@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Medico {
@@ -16,6 +18,9 @@ public class Medico {
 	private String nombre;
 	private String apellidos;
 	private String especialidad;
+	@ManyToOne
+	@JoinColumn (name="idHospital")
+	private Hospital hospital;
 	public Medico() {
 	}
 
