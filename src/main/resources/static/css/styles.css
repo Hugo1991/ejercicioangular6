@@ -1,15 +1,21 @@
 html {
-	background-color: #FFF;
+	background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 body {
 	font-family: 'roboto', sans-serif;
+    background-color: transparent;
+    
 }
 
 #pag{
+    width: 1024px;
     padding-left: 50px;
     padding-right: 50px;
     margin: 0 auto;
+    
 }
 .toolbar {
 	background-color: #2196F3;
@@ -138,10 +144,7 @@ ol,ul{list-style:none;margin:0;padding:0; }
 
 .clear{clear:both;}/* clear float */
 
-body {
-	font-family: 'Ubuntu Condensed', sans-serif;
-	background:#ebebeb;
-}
+
 .wrap {
 	width:80%;
 	margin: 0 auto;
@@ -353,7 +356,7 @@ nav > ul > li > a:hover > span {
     background-size: 100% 300px;
     background-repeat: no-repeat;
     height: 300px;
-
+    position: relative;
 
     border-radius: 40px;
 }
