@@ -26,12 +26,12 @@ public class Cita {
 	@ManyToOne
 	@JoinColumn (name="idMedico")
 	private Medico medico;
-	private Date fechaCita;
+	private String fechaCita;
 	@ManyToOne
 	@JoinColumn (name="idHospital")
 	private Hospital hospital;
 	public Cita(){}
-	public Cita(Usuario usuario,Date fecha,Hospital hospital,Medico medico){
+	public Cita(Usuario usuario,String fecha,Hospital hospital,Medico medico){
 		setUsuario(usuario);
 		setFecha(fecha);
 		setHospital(hospital);
@@ -40,7 +40,7 @@ public class Cita {
 	public void setUsuario(Usuario usuario){
 		this.usuario=usuario;
 	}
-	public void setFecha(Date fecha){
+	public void setFecha(String fecha){
 		this.fechaCita=fecha;
 	}
 	public void setHospital(Hospital hospital){
@@ -49,10 +49,13 @@ public class Cita {
 	public void setMedico(Medico medico){
 		this.medico=medico;
 	}
+	public long idCita(){
+		return idCita;
+	}
 	public Usuario getUsuario(){
 		return usuario;
 	}
-	public Date getFecha(){
+	public String getFecha(){
 		return fechaCita;
 	}
 	public Hospital getHospital(){

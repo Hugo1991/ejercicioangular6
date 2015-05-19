@@ -20,16 +20,22 @@ public class DataBaseUsage implements CommandLineRunner {
 	
 	@Autowired
 	private UsuarioRepository usuarios;
+	
 	@Override
 	public void run(String... args) throws Exception {
 		
 		 // save a couple of customers
-        hospitales.save(new Hospital("ramon y cajal","ramon y cajal","Madrid","España",915765456));
-        medicos.save(new Medico(918276l, "Doctor florencio", "Magdalenas Martinez", "Doctorcito Malcorazon"));
+		Hospital h=new Hospital("ramon y cajal","ramon y cajal","Madrid","España",915765456);
+        Medico m=new Medico(918276l, "Doctor florencio", "Magdalenas Martinez", "Doctorcito Malcorazon");
+        Usuario u=new Usuario("hugo", "fernnandez", "02-02-1991", "hugofernandezvisier@gmail.com", 49100755l, "123456789");
+		hospitales.save(h);
+        medicos.save(m);
         medicos.save(new Medico(100276l, "Doctor Down", "de carrito", "dentista"));
-        citas.save(new Cita());
+        usuarios.save(u);
+        Cita c=new Cita(u,"07-02-1991",h,m);
+        citas.save(c);
 
-        usuarios.save(new Usuario("hugo", "fernnandez", "02-02-1991", "hugofernandezvisier@gmail.com", 49100755l, "123456789"));
+       
         // fetch all customers
         Iterable<Hospital> hospital = hospitales.findAll();
         System.out.println("Customers found with findAll():");

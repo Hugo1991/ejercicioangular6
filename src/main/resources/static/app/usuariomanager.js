@@ -33,7 +33,6 @@ function usuarioManager($resource, $timeout) {
 	function reload(){
 		var promise = UsuarioResource.query(function(newUsuarios){
 			usuarios.length = 0;
-			console.log(newUsuarios);
 			usuarios.push.apply(usuarios, newUsuarios);
 		}).$promise;
 		return promise;

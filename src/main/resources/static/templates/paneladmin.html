@@ -316,8 +316,8 @@
                 <div ng-hide="vm.citas && vm.citas.length > 0" style="margin:20px">There are no posts yet.</div>
 
                 <ul class="list">
-                    <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="usuario in vm.usuarios">
-                        <a href="/#/cita/{{cita.nombre}}">
+                    <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="cita in vm.citas">
+                        <a href="/#/cita/{{cita.id}}">
                             <div class="list-primary-tile">
                                 <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
                             </div>
@@ -329,15 +329,17 @@
                                         <TR>
                                             <TH>#</TH>
                                             <TH>Usuario</TH>
+                                            <TH>Fecha</TH>
                                             <TH>Medico</TH>
-                                            <TH>Contrase&ntildea</TH>
+                                            <TH>Hospital</TH>
                                         </TR>
                                     </thead>
                                     <TR>
-                                        <TD>{{cita.id}}</TD>
-                                        <TD>{{cita.usuario}}</TD>
-                                        <TD>{{cita.medico}}</TD>
-                                        <TD>{{cita.hospital}}</TD>
+                                        <TD>{{cita.idCita}}</TD>
+                                        <TD>{{cita.usuario.nombre}}</TD>
+                                        <TD>{{cita.fecha}}</TD>
+                                        <TD>{{cita.medico.nombre}}</TD>
+                                        <TD>{{cita.hospital.nombre}}</TD>
                                         
                                     </TR>
                                 </table>

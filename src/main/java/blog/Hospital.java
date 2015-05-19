@@ -41,7 +41,22 @@ public class Hospital {
 	public void setTelefono(long nTelefono){
 		this.nTelefono=nTelefono;
 	}
+	public long getIdHospital(){
+		return idHospital;
+	}
 	public String getNombre(){
 		return nombre;
+	}
+	public String getCalle(){
+		return calle;
+	}
+	public String getPoblacion(){
+		return poblacion;
+	}
+	public String getPais(){
+		return pais;
+	}
+	public long getnTelefono(){
+		return nTelefono;
 	}
 }
