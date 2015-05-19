@@ -5,7 +5,6 @@ NewUserController.$inject = ["usuarioManager", "$location"];
 function NewUserController(usuarioManager, $location) {
 
 	var vm = this;
-	var a=true;
 	//View model properties
 	
 	vm.newUsuario = {};

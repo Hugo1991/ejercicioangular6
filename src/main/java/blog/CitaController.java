@@ -1,5 +1,5 @@
 
-/*package blog;
+package blog;
 
 
 import java.util.List;
@@ -18,16 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/citas")
 
 public class CitaController {
-<<<<<<< HEAD
-	/*
-	@Autowired
-	private CitaRepository citaRepository;
-
-
 	
 	@Autowired
-	private CitaRepository citaRepository;
-	
+	private CitaRepository citaRepository;	
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
@@ -49,6 +42,5 @@ public class CitaController {
 	}
 }
 
-	*/
 
 

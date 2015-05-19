@@ -55,8 +55,7 @@ public class Medico {
 		this.apellidos = apellidos;
 	}
 
-	
-	
+
 	public long getId() {
 		return idMedico;
 	}

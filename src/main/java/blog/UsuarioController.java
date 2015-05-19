@@ -31,11 +31,11 @@ public class UsuarioController {
 	}
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public List<Usuario> mostrarUsuarios(Model model) {
+	public List<Usuario> getUsuarios(Model model) {
 		return usuarioRepository.findAll();
 	}
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Usuario mostrarUsuario(@PathVariable Long id) {
+	public Usuario getUsuario(@PathVariable Long id) {
 		return usuarioRepository.findOne(id);
 	}
 

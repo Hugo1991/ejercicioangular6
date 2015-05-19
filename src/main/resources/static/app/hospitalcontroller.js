@@ -4,19 +4,19 @@ HospitalController.$inject = ["hospitalManager", "$routeParams", "$location", "L
 
 function HospitalController(hospitalManager, $routeParams, $location, LxNotificationService) {
 
-	var hm = this;
+	var vm = this;
 	
 	//View model properties
 	
-	hm.hospital = {};
+	vm.hospital = {};
 		
 	//Controller logic
 	
-	hm.hospital = hospitalManager.getHospital($routeParams.id);
+	vm.hospital = hospitalManager.getHospital($routeParams.id);
 
 	//Controller actions
 	
-	hm.deleteHospital = function(hospital) {
+	vm.deleteHospital = function(hospital) {
 		
 		LxNotificationService.confirm('Delete confirmation',
 				'Are you sure you want to delete this post?', 
@@ -25,7 +25,7 @@ function HospitalController(hospitalManager, $routeParams, $location, LxNotifica
 		        {
 		            if(answer === true){
 		            	hospitalManager.deleteHospital(hospital);
-		        		$location.path("/hospitales");		            	
+		        		$location.path("/listahospitales");		            	
 		            }					
 		        });
 	};

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hospitales")
-
 public class HospitalController {
 	
 	@Autowired

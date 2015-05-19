@@ -4,27 +4,28 @@ HospitalListController.$inject = ["hospitalManager", "$location"];
 
 function HospitalListController(hospitalManager, $location) {
 
-	var hm = this;
+	var vm = this;
 	
 	//View model properties
 	
-	hm.hospitales = []
+	vm.hospitales = []
 		
 	//Controller logic
 	
-	hm.hospitales = hospitalManager.getHospitales();
+	vm.hospitales = hospitalManager.getHospitales();
 	
 	//Controller actions
 
-	hm.deleteHospital = function(hospital) {
+	vm.deleteHospital = function(hospital) {
 		hospitalManager.deleteHospital(hospital);
 	};
 	
-	hm.viewHospital = function(hospital) {
-		$location.path("/");
+	vm.viewHospital = function(hospital) {
+		$location.path("/hospital");
 	};
-	
-	hm.reload = function(hospital) {
+
+	vm.reload = function(post) {
+
 		hospitalManager.reload().then(function(hospitales){
 			vm.hospitales = hospitales;
 		});

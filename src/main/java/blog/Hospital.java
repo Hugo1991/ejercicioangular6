@@ -18,7 +18,6 @@ public class Hospital {
 	private String poblacion;
 	private String pais;
 	private long nTelefono;
-	private ArrayList<Medico> medicos;
 	public Hospital(){}
 	public Hospital(String nombre,String calle, String poblacion,String pais,long nTelefono){
 		setNombre(nombre);
@@ -42,11 +41,7 @@ public class Hospital {
 	public void setTelefono(long nTelefono){
 		this.nTelefono=nTelefono;
 	}
-	public void setMedico(Medico medico){
-		this.medicos.add(medico);
-	}
-	
-	public ArrayList<Medico> getMedicos(){
-		return medicos;
+	public String getNombre(){
+		return nombre;
 	}
 }
