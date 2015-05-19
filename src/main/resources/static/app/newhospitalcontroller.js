@@ -16,6 +16,6 @@ function NewHospitalController(hospitalManager, $location) {
 		hospitalManager.newHospital(newHospital);
 		
 		vm.newHospital = {};
-		$location.path("/listahospitales");
+		$location.path("/listaHospitales");
 	};
 };

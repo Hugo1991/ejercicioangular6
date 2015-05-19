@@ -1,0 +1,53 @@
+<div ng-controller="UserListController as vm"ng-controller="UserController as vm" layout="column" layout-fill>
+	
+	
+
+	<div class="content">
+
+	<div id="new-blog-button">
+		<a href="#/registro" class="btn btn--xl btn--red btn--fab" lx-ripple>
+			<i class="mdi mdi--add"></i>
+		</a>
+	</div>
+
+	<div ng-hide="vm.usuarios && vm.usuarios.length > 0" style="margin:20px">There are no posts yet.</div>
+
+	<ul class="list">
+		<li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="usuario in vm.usuarios">
+			<a href="/#/usuario/{{usuario.nombre}}">
+				<div class="list-primary-tile">
+                     <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
+                </div>
+				<div class="list-content-tile list-content-tile--two-lines">
+					
+					
+					<table class="table table-striped">
+					<thead>
+                <TR> 
+                    <TH>#</TH> 
+                   <TH>Nombre</TH> 
+                   <TH>Apellidos</TH> 
+                   <TH>Fecha de nacimiento</TH>
+                   <TH>Correo electr&oacutenico</TH>  
+                   <TH>Contrase&ntildea</TH>
+                </TR> 
+                    </thead>
+                <TR> 
+                    <TD>{{usuario.id}}</TD>
+                   <TD>{{usuario.nombre}}</TD> 
+                   <TD>{{usuario.apellidos}}</TD> 
+                   <TD>{{usuario.fechaNac}}</TD> 
+                   <TD>{{usuario.email}}</TD>
+                   <TD>{{usuario.pass}}</TD>
+                </TR>
+                </table>
+                </a>
+          		<button type="submit"ng-click="vm.deleteUsuario(vm.usuario)" class="btn">Borrar</button>
+               
+				</div>
+			
+		</li>
+	</ul>
+    
+    </div>
+</div>

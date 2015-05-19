@@ -21,7 +21,7 @@ function HospitalListController(hospitalManager, $location) {
 	};
 	
 	vm.viewHospital = function(hospital) {
-		$location.path("/hospital");
+		$location.path("/");
 	};
 
 	vm.reload = function(post) {

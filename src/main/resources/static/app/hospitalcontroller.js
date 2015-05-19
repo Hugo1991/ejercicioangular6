@@ -25,7 +25,7 @@ function HospitalController(hospitalManager, $routeParams, $location, LxNotifica
 		        {
 		            if(answer === true){
 		            	hospitalManager.deleteHospital(hospital);
-		        		$location.path("/listahospitales");		            	
+		        		$location.path("/listaHospitales");		            	
 		            }					
 		        });
 	};

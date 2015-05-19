@@ -1,15 +1,4 @@
 <div ng-controller="HospitalListController as vm" layout="column" layout-fill>
-	
-	<div class="toolbar">
-		<span class="toolbar__label fs-title">Blog</span>
-		
-		<div class="toolbar__right mr">
-            <a href="" ng-click="vm.reload()" class="btn btn--l btn--white btn--icon" lx-ripple>
-                <i class="mdi mdi--refresh"></i>
-            </a>
-        </div>
-		
-	</div>
 
 	<div class="content">
 
@@ -30,6 +19,26 @@
 				<div class="list-content-tile list-content-tile--two-lines">
 					<strong>{{hospital.nombre}}</strong>
 					<span>{{hospital.calle}}</span>
+					<table class="table table-striped">
+					<thead>
+                <TR> 
+                    <TH>#</TH> 
+                   <TH>Nombre</TH> 
+                   <TH>Calle</TH> 
+                   <TH>Poblaci&oacuten</TH>
+                   <TH>Pa&iacutes</TH>  
+                   <TH>N&uacutemero de tel&eacutefono</TH>
+                </TR> 
+                    </thead>
+                <TR> 
+                   <TD>{{hospital.idHospital}}</TD>
+                   <TD>{{hospital.nombre}}</TD> 
+                   <TD>{{hospital.calle}}</TD> 
+                   <TD>{{hospital.poblacion}}</TD> 
+                   <TD>{{hospital.pais}}</TD>
+                   <TD>{{hospital.nTelefono}}</TD>
+                </TR>
+                </table>
 				</div>
 			</a>
 		</li>
