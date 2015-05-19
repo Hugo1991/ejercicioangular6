@@ -361,6 +361,47 @@ nav > ul > li > a:hover > span {
     border-radius: 40px;
 }
 
+.icon-buscar{
+    background-image: url(../assets/img/search.png);
+    height: 22px;
+    width: 25px;
+    margin-bottom: 15px;
 
-//PANEL DE ADMINISTRACION
+        
+}
+h4{
+    top: 2px;
+    width: 230px;
+    left: 60px;
+    position: absolute;
+    
+}
 
+
+
+.cuerpo-buscar{
+    
+    background-color: aliceblue;
+    opacity: 0.88;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px;
+    box-shadow: 5px 5px 30px black;
+    width: 300px;
+}
+
+.contenedor-busqueda{
+    background-color: floralwhite;
+    padding: 20 20 2 20;
+    box-shadow: 1px 1px 1px black;
+}
+
+.select-cuerpo{
+    width: 100px;
+    max-width: 140px;
+    
+}
+.center-block{
+    display: block !important;
+    margin: 0 auto !important;    
+}
