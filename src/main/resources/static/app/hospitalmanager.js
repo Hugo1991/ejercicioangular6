@@ -1,10 +1,10 @@
 angular.module("app").factory("hospitalManager", hospitalManager);
 
-citaManager.$inject = [ "$resource", "$timeout" ];
+hospitalManager.$inject = [ "$resource", "$timeout" ];
 
 function hospitalManager($resource, $timeout) {
 
-	var CitaResource = $resource('/hospitales/:id', {
+	var HospitalResource = $resource('/hospitales/:id', {
 		id : '@id'
 	}, {
 		update : {
@@ -12,7 +12,7 @@ function hospitalManager($resource, $timeout) {
 		}
 	});
 
-	var hospitales= [];
+	var hospitales = [];
 
 	function autoreload(){
 		reload();
@@ -25,15 +25,15 @@ function hospitalManager($resource, $timeout) {
 		reload : reload,
 		getHospitales : getHospitales,
 		getHospital : getHospital,		
-		newHospital: newHospital,
+		newHospital : newHospital,
 		updateHospital : updateHospital,
 		deleteHospital : deleteHospital
 	}
 
 	function reload(){
-		var promise = CitaResource.query(function(newCitas){
+		var promise = HospitalResource.query(function(newhospitales){
 			hospitales.length = 0;
-			hospitales.push.apply(hospitales, newHospitales);
+			hospitales.push.apply(hospitales, newhospitales);
 		}).$promise;
 		return promise;
 	}
