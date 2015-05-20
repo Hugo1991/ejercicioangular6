@@ -20,31 +20,63 @@
 	      </div>
 	    </div>
             
-            </br></br></br>
-      <div ng-controller="NewCitaController as vm" id="cita" style="align:center;">     
-    chupame la polla y haz un mejor diseño no con br no me jodas</br>  c  <h3> Concerta tu cita</h3>
+           
+      <div ng-controller="NewCitaController as vm" id="cita" style="align:center;">   
+        
+     <div id="selechos">
+    
+      <h1><b> Concerta tu cita</b></h1>
 		<form ng-submit="vm.addCita(vm.newCita)>
 		Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita"  name="fecha"></br></br>
 		
 		
-		</br></br>
-		Selecciona hospital;
+		
+		
 		<div ng-controller="HospitalListController as hm">
-		<select ng-model="vm.newCita.hospital" >
+		<b>Selecciona hospital:</b><select ng-model="vm.newCita.hospital" >
 		    <option selected>Elije hospital</option>
 		  	<option ng-repeat="hospital in hm.hospitales" value={{hospital}}>{{hospital.nombre}}</option>
-		</select></br></br>
+		</select>
+		</div>
+		</div> 
+		<div id="seleces">
+			<div id="minies">
+		
+				<div ng-controller="MedicoListController as mm">
+				<b>Selecciona especialista:</b><select ng-model="vm.newCita.medico">
+				    <option selected>Elije especialidad</option>
+				  <option ng-repeat="medico in mm.medicos" value={{medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
+				</select></div>
+					<div id="botoncita">
+				   <button id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
+				    </div>   
+				    
+				</form>
+			</div> 
+		 <div class="modal-dialog"id="cuadroencita">
+                <div class="modal-content">
+                    
+                    <div class="container" >
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                                <strong><h2 >Datos de hospital</h2></strong>
+                                <strong><h3>Nombre: {{uc.usuario.nombre}}</h3></strong>
+                               	<strong><h3>Calle: {{uc.usuario.apellidos}}</h3></strong>
+                               	<strong><h3>Poblacion: {{uc.usuario.DNI}}</h3></strong>
+                               	<strong><h3>Pais: {{uc.usuario.fechaNac}}</h3></strong>
+                               	<strong><h3>Numero de telefono: {{uc.usuario.email}}</h3></strong>
+                                		
+									
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+        </div>
 		</div>
 		
-		
-		Selecciona especialista;
-		<div ng-controller="MedicoListController as mm">
-		<select ng-model="vm.newCita.medico">
-		    <option selected>Elije especialidad</option>
-		  <option ng-repeat="medico in mm.medicos" value={{medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
-		</select>
-		   <button id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
-		            
-		</form>
-		</div> 
+</div>
+
+
 </div>
