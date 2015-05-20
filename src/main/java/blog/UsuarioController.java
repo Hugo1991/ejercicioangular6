@@ -26,7 +26,7 @@ public class UsuarioController {
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void borrarUsuario(@PathVariable Long dni) {
+	public void deleteUsuario(@PathVariable Long dni) {
 		usuarioRepository.delete(dni);
 	}
 	

@@ -19,7 +19,7 @@ import javax.persistence.ManyToOne;
 public class Cita {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idCita;
+	private long id;
 	@ManyToOne
 	@JoinColumn (name="idUsuario")
 	private Usuario usuario;
@@ -49,8 +49,8 @@ public class Cita {
 	public void setMedico(Medico medico){
 		this.medico=medico;
 	}
-	public long idCita(){
-		return idCita;
+	public long getid(){
+		return id;
 	}
 	public Usuario getUsuario(){
 		return usuario;

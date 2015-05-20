@@ -16,7 +16,7 @@ function RouteConfig($routeProvider) {
 	
 	$routeProvider.when('/listausuarios', { templateUrl : "templates/listausuarios.html" });
 	$routeProvider.when('/usuario/:id', { templateUrl : "templates/usuario.html" });
-	$routeProvider.when('/citas', { templateUrl : "templates/citas.html" });
+	$routeProvider.when('/cita/:id', { templateUrl : "templates/cita.html" });
 	$routeProvider.when('/post/:id', { templateUrl : "templates/post.html" });
 	
 	$routeProvider.when('/paneladmin', { templateUrl : "templates/paneladmin.html" });

@@ -39,7 +39,6 @@ function usuarioManager($resource, $timeout) {
 	}
 	
 	function getUsuarios() {
-		
 		return usuarios;
 	}
 

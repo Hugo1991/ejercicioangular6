@@ -11,7 +11,7 @@ public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	
 	private long DNI;
 	private String nombre;
@@ -46,6 +46,9 @@ public class Usuario {
 	}
 	public void setPass(String pass){
 		this.pass=pass;
+	}
+	public Long getId(){
+		return id;
 	}
 	public long getDNI(){
 		return DNI;

@@ -33,7 +33,6 @@ function citaManager($resource, $timeout) {
 	function reload(){
 		var promise = CitaResource.query(function(newCitas){
 			citas.length = 0;
-			console.log(newCitas);
 			citas.push.apply(citas, newCitas);
 		}).$promise;
 		return promise;
@@ -46,6 +45,7 @@ function citaManager($resource, $timeout) {
 	function getCita(id) {
 		for (var i = 0; i < citas.length; i++) {
 			if (citas[i].id.toString() === id) {
+				console.log(citas[i]);
 				return citas[i];
 			}
 		}

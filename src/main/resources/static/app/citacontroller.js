@@ -16,7 +16,7 @@ function CitaController(citaManager, $routeParams, $location, LxNotificationServ
 
 	//Controller actions
 	
-	vm.deleteCita = function(citta) {
+	vm.deleteCita = function(cita) {
 		
 		LxNotificationService.confirm('Delete confirmation',
 				'Are you sure you want to delete this post?', 
@@ -25,7 +25,7 @@ function CitaController(citaManager, $routeParams, $location, LxNotificationServ
 		        {
 		            if(answer === true){
 		            	citaManager.deletePostCita(cita);
-		        		$location.path("/");		            	
+		        		$location.path("/paneladmin");		            	
 		            }					
 		        });
 	};

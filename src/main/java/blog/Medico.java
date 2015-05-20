@@ -25,15 +25,15 @@ public class Medico {
 	}
 
 	public Medico(Long nColegiado,String nombre, String apellidos,String especialidad) {
-		setNumeroColegiado(nColegiado);
+		setnColegiado(nColegiado);
 		setNombre(nombre);
 		setApellidos(apellidos);
 		setEspecialidad(especialidad);
 	}
-	public Long getNumeroColegiado(){
+	public Long getnColegiado(){
 		return nColegiado;
 	}
-	public void setNumeroColegiado(Long nColegiado){
+	public void setnColegiado(Long nColegiado){
 		this.nColegiado=nColegiado;
 	}
 	public String getNombre() {
@@ -56,8 +56,11 @@ public class Medico {
 	}
 
 
-	public long getId() {
+	public long getIdMedico() {
 		return idMedico;
+	}
+	public String getEspecialidad(){
+		return especialidad;
 	}
 
 }

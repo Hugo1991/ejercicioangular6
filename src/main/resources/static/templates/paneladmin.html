@@ -168,12 +168,11 @@
 
                 <ul class="list">
                     <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="usuario in vm.usuarios">
-                        <a href="/#/usuario/{{usuario.nombre}}">
+                        <a href="/#/usuario/{{usuario.id}}">
                             <div class="list-primary-tile">
                                 <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
                             </div>
                             <div class="list-content-tile list-content-tile--two-lines">
-
 
                                 <table class="table table-striped">
                                     <thead>
@@ -196,7 +195,7 @@
                                     </TR>
                                 </table>
                         </a>
-                        <button type="submit" ng-click="vm.deleteUsuario(vm.usuario)" class="btn">Borrar</button>
+                        <button type="submit" ng-click="usuario.deleteUsuario(usuario)" class="btn">Borrar</button>
 
                         </div>
 
@@ -232,9 +231,9 @@
                                     <thead>
                                         <TR>
                                             <TH>#</TH>
+                                            <TH>Numero colegiado</TH>
                                             <TH>Nombre</TH>
                                             <TH>Apellidos</TH>
-                                            <TH>N&uacutemero de colegiado</TH>
                                             <TH>Especialidad</TH>
                                         </TR>
                                     </thead>
@@ -268,7 +267,6 @@
 
                 <ul class="list">
                     <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="hospital in vm.hospitales">
-                        <a href="/#/post/{{post.id}}">
                             <div class="list-primary-tile">
                                 <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
                             </div>
@@ -295,16 +293,12 @@
                                     </TR>
                                 </table>
                             </div>
-                        </a>
                     </li>
                 </ul>
 
             </div>
         </div>
         <div id="citas" style="display:none;" ng-controller="CitaListController as vm" layout="column" layout-fill>
-
-
-
             <div class="content">
 
                 <div id="new-blog-button">
@@ -317,13 +311,13 @@
 
                 <ul class="list">
                     <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="cita in vm.citas">
-                        <a href="/#/cita/{{cita.id}}">
+                       
                             <div class="list-primary-tile">
                                 <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
                             </div>
                             <div class="list-content-tile list-content-tile--two-lines">
 
-
+<a href="/#/cita/{{cita.id}}">
                                 <table class="table table-striped">
                                     <thead>
                                         <TR>
@@ -335,17 +329,17 @@
                                         </TR>
                                     </thead>
                                     <TR>
-                                        <TD>{{cita.idCita}}</TD>
+                                     
+                                        <TD>{{cita.id}}</TD>
                                         <TD>{{cita.usuario.nombre}}</TD>
                                         <TD>{{cita.fecha}}</TD>
                                         <TD>{{cita.medico.nombre}}</TD>
                                         <TD>{{cita.hospital.nombre}}</TD>
-                                        
+                                     
                                     </TR>
                                 </table>
                         </a>
-                        <button type="submit" ng-click="vm.deleteCita(vm.cita)" class="btn">Borrar</button>
-
+                        
                         </div>
 
                     </li>

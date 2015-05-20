@@ -32,14 +32,16 @@ public class CitaController {
 	public void deleteCita(@PathVariable Long id) {
 		citaRepository.delete(id);
 	}
+
 	@RequestMapping(method = RequestMethod.GET)
-	public List<Cita> mostrarCitas(Model model) {
+	public List<Cita> getCitas(Model model) {
 		return citaRepository.findAll();
 	}
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Cita mostrarCita(@PathVariable Long id) {
+	public Cita getCita(@PathVariable Long id) {
 		return citaRepository.findOne(id);
 	}
+	
 }
 
 

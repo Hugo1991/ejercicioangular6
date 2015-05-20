@@ -1,4 +1,4 @@
-<div ng-controller="UserController as vm">
+<div ng-controller="UserController as uc">
 
 	<div class="toolbar">
 		<div class="toolbar__left mr">
@@ -12,13 +12,12 @@
 
 <div class="content">
 
-	<h1>{{vm.usuario.nombre}}</h1>
-	<p>By {{vm.usuario.apellidos}}</p>
-	<p>{{vm.post.ap}}</p>
+	<h1>nombre: {{uc.usuario.nombre}}</h1>
+	<p>By {{uc.usuario.apellidos}}</p>
 	
 	<div class="grid">
 		<a href="" type="submit" class="btn btn--m btn--blue btn--raised"
-			lx-ripple style="float: right; margin-top: 2em;" ng-click="vm.deleteUsuario(vm.usuario)">Delete</a>
+			lx-ripple style="float: right; margin-top: 2em;" ng-click="uc.deleteUsuario(uc.usuario)">Delete</a>
 	</div>
 </div>
 	
