@@ -24,7 +24,7 @@ function CitaController(citaManager, $routeParams, $location, LxNotificationServ
 				function(answer)
 		        {
 		            if(answer === true){
-		            	citaManager.deletePostCita(cita);
+		            	citaManager.deleteCita(cita);
 		        		$location.path("/paneladmin");		            	
 		            }					
 		        });
