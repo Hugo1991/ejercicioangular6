@@ -18,14 +18,14 @@ function UserController(usuarioManager, $routeParams, $location, LxNotificationS
 	
 	vm.deleteUsuario = function(usuario) {
 		
-		LxNotificationService.confirm('Delete confirmation',
-				'Are you sure you want to delete this post?', 
-				{ cancel:'Cancel', ok:'Delete' }, 
+		LxNotificationService.confirm('Confirma tu deseo',
+				'¿Estas seguro de que quieres eliminar este usuario?', 
+				{ cancel:'Cancelar', ok:'Eliminar' }, 
 				function(answer)
 		        {
 		            if(answer === true){
 		            	usuarioManager.deleteUsuario(usuario);
-		        		$location.path("/");		            	
+		        		$location.path("/paneladmin");		            	
 		            }					
 		        });
 	};

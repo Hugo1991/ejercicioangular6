@@ -18,9 +18,9 @@ function CitaController(citaManager, $routeParams, $location, LxNotificationServ
 	
 	vm.deleteCita = function(cita) {
 		
-		LxNotificationService.confirm('Delete confirmation',
-				'Are you sure you want to delete this post?', 
-				{ cancel:'Cancel', ok:'Delete' }, 
+		LxNotificationService.confirm('Confirma su deseo',
+				'¿Estas seguro de que quieres eliminar esta cita?', 
+				{ cancel:'Cancelar', ok:'Eliminar' }, 
 				function(answer)
 		        {
 		            if(answer === true){

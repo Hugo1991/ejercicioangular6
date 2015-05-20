@@ -14,7 +14,7 @@
 
 	<ul class="list">
 		<li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="usuario in vm.usuarios">
-			<a href="/#/usuario/{{usuario.nombre}}">
+			
 				<div class="list-primary-tile">
                      <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
                 </div>
@@ -41,13 +41,22 @@
                    <TD>{{usuario.pass}}</TD>
                 </TR>
                 </table>
-                </a>
-          		<button type="submit"ng-click="vm.deleteUsuario(usuario)" class="btn">Borrar</button>
+                
+          		<button type="submit"ng-click="vm.deleteUsuario(vm.usuario)" class="btn">Borrar</button>
+                <button><a href="/#/usuario/{{usuario.id}}"><button class="btn" >Ver</button></a>
                
 				</div>
 			
 		</li>
 	</ul>
+	
+	         
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
     
     </div>
 </div>

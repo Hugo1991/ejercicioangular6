@@ -168,7 +168,7 @@
 
                 <ul class="list">
                     <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="usuario in vm.usuarios">
-                        <a href="/#/usuario/{{usuario.id}}">
+                        
                             <div class="list-primary-tile">
                                 <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
                             </div>
@@ -194,8 +194,9 @@
                                         <TD>{{usuario.pass}}</TD>
                                     </TR>
                                 </table>
-                        </a>
-                        <button type="submit" ng-click="usuario.deleteUsuario(usuario)" class="btn">Borrar</button>
+                       
+                        <button type="submit"ng-click="vm.deleteUsuario(vm.usuario)" class="btn">Borrar</button>
+                		<button><a href="/#/usuario/{{usuario.id}}"><button class="btn" >Ver</button></a>
 
                         </div>
 
@@ -245,6 +246,8 @@
                                         <TD>{{medico.especialidad}}</TD>
                                     </TR>
                                 </table>
+                                <button type="submit"ng-click="mm.deleteMedico(mm.medico)" class="btn">Borrar</button>
+                <button><a href="/#/medico/{{medico.idMedico}}"><button class="btn" >Ver</button></a>
                             </div>
                         </a>
                     </li>
@@ -292,6 +295,8 @@
                                         <TD>{{hospital.nTelefono}}</TD>
                                     </TR>
                                 </table>
+                                <button type="submit"ng-click="vm.deleteHospital(vm.hospital)" class="btn">Borrar</button>
+                <button><a href="/#/hospital/{{hospital.idHospital}}"><button class="btn" >Ver</button></a>
                             </div>
                     </li>
                 </ul>
@@ -317,7 +322,7 @@
                             </div>
                             <div class="list-content-tile list-content-tile--two-lines">
 
-<a href="/#/cita/{{cita.id}}">
+
                                 <table class="table table-striped">
                                     <thead>
                                         <TR>
@@ -338,7 +343,8 @@
                                      
                                     </TR>
                                 </table>
-                        </a>
+                                <button type="submit"ng-click="vm.deleteCita(vm.cita)" class="btn">Borrar</button>
+                <button><a href="/#/cita/{{cita.id}}"><button class="btn" >Ver</button></a>
                         
                         </div>
 

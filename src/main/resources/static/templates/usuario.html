@@ -1,24 +1,42 @@
 <div ng-controller="UserController as uc">
 
-	<div class="toolbar">
-		<div class="toolbar__left mr">
-            <a href="/#/" class="btn btn--l btn--white btn--icon" lx-ripple>
-                <i class="mdi mdi--arrow-back"></i>
-            </a>
-        </div>
 	
-		<span class="toolbar__label fs-title">Post</span>
-	</div>
 
 <div class="content">
-
-	<h1>nombre: {{uc.usuario.nombre}}</h1>
-	<p>By {{uc.usuario.apellidos}}</p>
 	
-	<div class="grid">
-		<a href="" type="submit" class="btn btn--m btn--blue btn--raised"
-			lx-ripple style="float: right; margin-top: 2em;" ng-click="uc.deleteUsuario(uc.usuario)">Delete</a>
-	</div>
+	
 </div>
+
+			
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="container" id="conten">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                                <strong><h1 >Datos de usuario</h1></strong>
+                                <strong><h3>Nombre: {{uc.usuario.nombre}}</h3></strong>
+                               	<strong><h3>Apellidos: {{uc.usuario.apellidos}}</h3></strong>
+                               	<strong><h3>DNI: {{uc.usuario.DNI}}</h3></strong>
+                               	<strong><h3>Fecha de nacimiento: {{uc.usuario.fechaNac}}</h3></strong>
+                               	<strong><h3>Correo electr&oacutenico: {{uc.usuario.email}}</h3></strong>
+                               	<strong><h3>Contrase&ntildea: {{uc.usuario.pass}}</h3>		</strong>						
+                                		<div id="botonborrar"style="margin-left:225px;margin-bottom:10px">
+									<a  href="" type="submit" class="btn btn--m btn--blue btn--raised"
+										 margin-top: 2em;" ng-click="uc.deleteUsuario(uc.usuario)">Eliminar</a>
+										 
+									</div>
+									<div class="toolbar__left mr">
+							           <button class="btn btn--m btn--blue btn--raised"> <a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
+							                <i class="mdi mdi--arrow-back"></i>
+							            </a></button>
+							        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+        </div>
 	
 </div>
