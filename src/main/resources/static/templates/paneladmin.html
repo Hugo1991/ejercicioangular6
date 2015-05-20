@@ -148,6 +148,46 @@
             </div>
 
         </div>
+        
+        <div ng-controller="NewMedicoController as mm"class="modal fade" id="popupnuevomedico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+                        </button>
+                    </div>
+                    <div id="formmedicos"style="width:575px;"class="form-bottom">
+				<h3> Nuevo Medico</h3>
+                    <form ng-submit="mm.addMedico(mm.newMedico)" class="registration-form">
+                    	<div class="form-group">
+                    		<label class="sr-only" for="form-first-name" label="nombre">Nombre</label>
+                        	<input  type="text" name="form-first-name" ng-model="mm.newMedico.nombre" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
+                        </div>
+                        <div class="form-group">
+                        	<label class="sr-only" for="form-last-name" label="apellidos">Apellidos</label>
+                        	<input type="text" name="form-last-name" ng-model="mm.newMedico.apellidos" placeholder="Apellidos..." class="form-last-name form-control" id="form-last-name">
+                        </div>
+                       
+                        <div class="form-group">
+                        	<label class="sr-only" for="form-email">Número de colegiados</label>
+                        	<input type="text" name="form-email" ng-model="mm.newMedico.nColegiado" placeholder="Numero de colegiados..." class="form-email form-control" id="form-email">
+                                 </div>
+                                 <div class="form-group">
+                    		<label class="sr-only" for="form-first-name" label="DNI">Especialidad</label>
+                        	<input type="text" name="form-dni" ng-model="mm.newMedico.especialidad" placeholder="Especialidad..." class="form-first-name form-control" id="form-first-name">
+                        </div>
+                                
+                        <button type="submit" class="btn">Crear medico</button>
+                        </form>
+                                
+                    
+                   </div>
+                </div>
+            </div>
+
+        </div>
 
     </div>
     <div id="cuerpo">
@@ -252,7 +292,8 @@
                         </a>
                     </li>
                 </ul>
-
+				  <button style="margin-left:400px;"class="btn" data-toggle="modal" data-target="#popupnuevomedico">Nuevo medico</button>
+				
 
             </div>
         </div>
@@ -300,7 +341,7 @@
                             </div>
                     </li>
                 </ul>
-
+			
             </div>
         </div>
         <div id="citas" style="display:none;" ng-controller="CitaListController as vm" layout="column" layout-fill>
