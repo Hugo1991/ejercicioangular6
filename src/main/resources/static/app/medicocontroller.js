@@ -25,7 +25,7 @@ function MedicoController(medicoManager, $routeParams, $location, LxNotification
 		        {
 		            if(answer === true){
 		            	medicoManager.deleteMedico(medico);
-		        		$location.path("/");		            	
+		        		$location.path("/paneladmin");		            	
 		            }					
 		        });
 	};
