@@ -7,6 +7,7 @@ function RouteConfig($routeProvider) {
 	$routeProvider.when('/', { templateUrl : "templates/principal.html" });
 	$routeProvider.when('/registro', { templateUrl : "templates/registro.html" });
 	$routeProvider.when('/creacita', { templateUrl : "templates/concertaCita.html" });
+	$routeProvider.when('/citacompleta', { templateUrl : "templates/citaCompleta.html" });
 
 	
 	$routeProvider.when('/postlist', { templateUrl : "templates/postlist.html" });
