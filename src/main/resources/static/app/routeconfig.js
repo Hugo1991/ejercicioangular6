@@ -22,6 +22,9 @@ function RouteConfig($routeProvider) {
 	$routeProvider.when('/hospital/:id', { templateUrl : "templates/hospital.html" });
 	
 	$routeProvider.when('/paneladmin', { templateUrl : "templates/paneladmin.html" });
+    
+ 
+    
 
 
 }

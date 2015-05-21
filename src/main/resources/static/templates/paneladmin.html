@@ -111,7 +111,7 @@
                        
                         <li><a href=""><span class=""><i class="icon "></i></span>Acciones administrativas</a>
                             <ul>
-                                <li onClick="mostrarUsuarios()"><a href="">Lista de usuarios</a></li>
+                                <li onClick="mostrarUsuarios()"><a href="">Lista usuarios</a></li>
                                 <li onClick="mostrarMedicos()"><a href="">Lista de m&eacutedicos</a></li>
                                 <li onClick="mostrarHospitales()"><a href="">Lista de hospitales</a></li>
                                 <li onClick="mostrarCitas()"><a href="">Lista de citas</a></li>
@@ -261,12 +261,6 @@
 
             <div class="content">
 
-                <div id="new-blog-button">
-                    <a href="#/registro" class="btn btn--xl btn--red btn--fab" lx-ripple>
-                        <i class="mdi mdi--add"></i>
-                    </a>
-                </div>
-
                 <div ng-hide="vm.usuarios && vm.usuarios.length > 0" style="margin:20px">There are no posts yet.</div>
 
                 <ul class="list">
@@ -313,11 +307,6 @@
 
             <div class="content">
 
-                <div id="new-blog-button">
-                    <a href="#/newpost" class="btn btn--xl btn--red btn--fab" lx-ripple>
-                        <i class="mdi mdi--add"></i>
-                    </a>
-                </div>
 
                 <div ng-hide="mm.medicos && mm.medicos.length > 0" style="margin:20px">There are no posts yet.</div>
 
@@ -362,12 +351,6 @@
 
             <div class="content">
 
-                <div id="new-blog-button">
-                    <a href="#/newpost" class="btn btn--xl btn--red btn--fab" lx-ripple>
-                        <i class="mdi mdi--add"></i>
-                    </a>
-                </div>
-
                 <div ng-hide="vm.hospitales && vm.hospitales.length > 0" style="margin:20px">There are no posts yet.</div>
 
                 <ul class="list">
@@ -407,11 +390,6 @@
         <div id="citas" style="display:none;" ng-controller="CitaListController as vm" layout="column" layout-fill>
             <div class="content">
 
-                <div id="new-blog-button">
-                    <a href="#/registro" class="btn btn--xl btn--red btn--fab" lx-ripple>
-                        <i class="mdi mdi--add"></i>
-                    </a>
-                </div>
 
                 <div ng-hide="vm.citas && vm.citas.length > 0" style="margin:20px">There are no posts yet.</div>
 

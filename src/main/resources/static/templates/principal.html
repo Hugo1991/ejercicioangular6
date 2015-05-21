@@ -16,7 +16,7 @@
                         <ul class="nav nav-tabs">
   		            		<li style="float:right;"><button class="btn" data-toggle="modal" data-target="#popupregistro">Login</button></li>
                             <li style="float:right;"><a href="#/registro" data-toggle="modal" >Registro</a></li>
-                            <a href="/"><button id="micuenta" class="button btn btnBold" type="submit">Administraci&oacuten</button></a>
+                            <a href="#/paneladmin"><button id="micuenta" class="button btn btnBold" >Administraci&oacuten</button></a>
                            
 
                     </div><!--/.nav-collapse -->
@@ -62,7 +62,7 @@
 							 </div> 
 							<div class="container"id="conten">
 							    <div class="row">
-							        <div class="col-sm-6 col-md-4 col-md-offset-4">
+							        <div class="">
 							            <h1 class="text-center login-title">Entra con tu cuenta</h1>
 							            <div class="account-wall">
 							                <img class="profile-img" src="img/login.png"
@@ -74,12 +74,12 @@
 							                    Entrar</button>
 							                <label class="checkbox pull-left">
 							                    <input type="checkbox" value="remember-me">
-							                    Recuerdame
+							                    Recordar
 							                </label>
-							                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+							                <a href="" class="pull-right need-help">necesitas ayuda </a><span class="clearfix"></span>
 							                </form>
 							            </div>
-							            <a href="#" class="text-center new-account">Create una cuenta </a>
+							            <a href="" class="text-center new-account">Create una cuenta </a>
 							        </div>
 							    </div>
 							</div>
@@ -165,12 +165,26 @@
 				</div>	
       
 				</div>
-				<div id="servicios"style="display:none;">
-				
+				<div id="servicios" style="display:none;">
+				    <div class="container">
+                        <div class="raw">
+                            <div class="servic-med">
+                                <div class="col-md-3 col-xs-3">
+                                </div>
+                                <div class="col-md-6 col-xs-6">
+                                    <div class="citamedica-print"><h2>Concerte su cita Medica</h2>
+                                        <a href="#/creacita"><button class="btn-cita"></button></a>
+                                                    
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-4"></div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
             <div class="container-fluid imagen-centro" id="home" >
 <div class="row">
-                            <div class="col-md-2  cuerpo-buscar">
+                            <div class="col-md-4  col-md-offset-1 cuerpo-buscar">
                                 <div class="container ">
                                     <i class="glyphicon icon-buscar"></i><h4>Encuentra tu centro medico</h4>
                                     <form class="contenedor-busqueda">
@@ -200,7 +214,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-md-4  cuerpo-buscar">
+                            <div class="col-md-6 col-md-offset-2  cuerpo-buscar">
                                 <div class="container">
                                     <i class="glyphicon icon-buscar"></i><h4>Informacion sobre hospital</h4>
                                     <form class="contenedor-busqueda">
@@ -218,8 +232,6 @@
                                     </form>
                                 </div>
                             </div>
-                            </div>
-                            <div class="col-md-4">
                             </div>
                         </div>
             </div>

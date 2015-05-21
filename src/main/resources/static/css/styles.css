@@ -262,16 +262,18 @@ nav > ul li {
 /*Sub-menu*/
 nav > ul > li:hover > ul {
 	display:block;
-	height:100%;
+	height:auto;
+    width: 500px;
 }
  
 nav > ul > li > ul {
 	display:block;
 	position:absolute;
+    height: 300;
 	background:#000;
 
 	overflow:hidden;
-	height:0%;
+	height:5%;
 	-webkit-transition: all .5s ease;
 	-moz-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -392,7 +394,7 @@ h4{
 
 .contenedor-busqueda{
     background-color: floralwhite;
-    padding: 20 20 2 20;
+    padding: 20px 20px 2px 20px;
     box-shadow: 1px 1px 1px black;
 }
 
@@ -405,3 +407,39 @@ h4{
     display: block !important;
     margin: 0 auto !important;    
 }
+.citamedica-print{
+    background-image: url(../img/citamedica-paint.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    height: 300px;
+    opacity: 0.95;
+    border-color: transparent;
+}
+.servic-med{
+    margin-top: 20px;
+    position: relative;
+
+}
+.btn-cita{
+    
+    background-image: url(../img/glyphicons-7-user-add.png) !important;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 40px;
+    padding: 0;
+    margin-left: 140px;
+    margin-top:23px;
+}
+.btn-cita:hover{
+    background-image: url()
+}
+#contenedor-crearcitas{
+    background-color: azure;
+    opacity: 0.8;
+    margin-top: 80px;
+}
+
