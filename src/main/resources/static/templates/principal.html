@@ -14,7 +14,6 @@
                     <div class="navbar-collapse collapse">
 
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#/" class="smothscroll">Home</a></li>
   		            <li style="float:right;"><button class="btn" data-toggle="modal" data-target="#popupregistro">Login</button></li>
                            <li style="float:right;"><a href="#/registro" data-toggle="modal" >Registro</a></li>
 
@@ -40,17 +39,10 @@
   		    <div class="navigation">
 				<nav>
                     <ul>
-                        <li><a href=""><span class=""><i class="icon "></i></span>asdsdsd</a></li>
-                        <li><a href=""><span class=""><i class="icon "></i></span>aasdsdsd</a>
-                            <ul>
-                                <li><a href="">asdsdsd</a></li>
-                                <li><a href="">asdsdsd</a></li>
-                                <li><a href="">asdsdsd</a></li>
-                            </ul>
-                        </li>
-                        <li><a href=""><span  class=""><i class="icon "></i></span>asdsdsd</a></li>
-                        <li><a href=""><span class=""><i class="icon "></i></span>asdsdsd</a></li>
-                        <li><a href=""><span class=""><i class="icon "></i></span>asdsdsd</a></li>
+                        <li onClick="mostrarHome()"><a href=""><span class=""><i class="icon "></i></span>Home</a></li>
+                        
+                        <li onClick="mostrarServicios()"><a href=""><span  class=""><i class="icon "></i></span>Servicios</a></li>
+                        <li onClick="mostrarFrecuentes()"><a href=""><span class=""><i class="icon "></i></span>Preguntas frecuentes</a></li>
                     </ul>
                 </nav>
 					 <span class="left-ribbon" ><img src="assets/img/left-fold.png"/> </span> 
@@ -95,8 +87,86 @@
                 </div>
                
         </div>
+        <script type="text/javascript">
+            
+	        function mostrarHome() {
+	
+	            document.getElementById('servicios').style.display = 'none';
+	            document.getElementById('frecuentes').style.display = 'none';
+	            
+	
+	            document.getElementById('home').style.display = 'block';
+	        }
+            function mostrarFrecuentes() {
+
+                document.getElementById('servicios').style.display = 'none';
+                document.getElementById('home').style.display = 'none';
+                
+
+                document.getElementById('frecuentes').style.display = 'block';
+            }
+            function mostrarServicios() {
+
+                document.getElementById('frecuentes').style.display = 'none';
+                document.getElementById('home').style.display = 'none';
+                
+
+                document.getElementById('servicios').style.display = 'block';
+            }
+            
+               
+
+               
+            </script>
         <div id="cuerpo">
-            <div class="container-fluid imagen-centro" >
+        <div id="frecuentes"style="display:none;">
+				
+				<div id="frec">
+					<div  id="titulo"><a >
+	              	<b>�Puedo solicitar cita sanitaria online los 365 d&iacuteas del a&ntildeo? </b>
+	                </a></div>
+	                <div id="respuesta">
+	                S&Iacute. Dado que es un servicio web, este servicio est&aacute activo 24 horas al d&iacutea.
+	                </div>
+                </div>
+                
+                <div id="frec">
+			         <div id="titulo"><a >
+	              	�C&oacutemo puedo anular una cita? 
+	                </a></div>
+	                <div id="respuesta">
+	                Entrando con tu perfil de usuario, busca la opci&oacuten "anular cita"  
+	                </div>
+                </div>
+                
+                <div id="frec">
+		                <div id="titulo"><a >
+		              	�Puedo modificar una cita ya confirmada para cambiar la fecha de consulta? 
+		              	</div>
+		              	<div id="respuesta">
+		                </a>NO, si utilizas este servicio y quieres cambiar una cita, debes anular 
+		                la cita existente y solicitar una cita nueva. 
+	                	</div>             
+					</div>
+					
+				<div id="frec">	
+					 <div id="titulo"><a >
+	              	�C�mo tengo que hacer para solicitar cita para dos personas diferentes? 
+	                </a></div>
+	                <div id="respuesta">
+	                La gesti&oacuten de la citaci�n por Internet es un proceso individual 
+	                que exige que se introduzcan los datos de cada usuario para la 
+	                reserva de la cita.
+	                 Por lo tanto, debe registrarse con 2 cuentas de usuario diferentes 
+	                 para que cada uno solicite su correspondiente cita.
+					 </div>
+				</div>	
+      
+				</div>
+				<div id="servicios"style="display:none;">
+				
+				</div>
+            <div class="container-fluid imagen-centro" id="home" >
 <div class="row">
                             <div class="col-md-2  cuerpo-buscar">
                                 <div class="container ">
