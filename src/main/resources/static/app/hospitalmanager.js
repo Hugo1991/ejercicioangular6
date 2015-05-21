@@ -45,6 +45,7 @@ function hospitalManager($resource, $timeout) {
 	function getHospital(id) {
 		for (var i = 0; i < hospitales.length; i++) {
 			if (hospitales[i].id.toString() === id) {
+				console.log(hospitales[i]);
 				return hospitales[i];
 			}
 		}

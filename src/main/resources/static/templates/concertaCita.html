@@ -27,28 +27,25 @@
     
       <h1><b> Concerta tu cita</b></h1>
 		<form ng-submit="vm.addCita(vm.newCita)">
-		Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita" name="fecha"></br></br>
-		<div ng-controller="HospitalListController as hm">
+		Selecciona tu fecha <input type="text" ng-model="vm.newCita.fechaCita" name="fecha"></br></br>
+		<div ng-controller="HospitalListController as hm" ng-controller="HospitaController as hc">
 		<b>Selecciona hospital:</b>
-		<select ng-model="vm.newCita.hospital" >
-		  	<option ng-repeat="hospital in hm.hospitales" value={{hospital}}>{{hospital.nombre}}</option>
-		</select>
-		</div>
-		</div> 
+						<select ng-model="vm.newCita.hospital">
+				  			<option  ng-repeat="hospital in hm.hospitales" value="{{hospital}}">{{hospital.nombre}}</option>
+						</select>
+		</div>		
 		<div id="seleces">
 			<div id="minies">
-								<div ng-controller="MedicoController as ml">
 
 				<div ng-controller="MedicoListController as ml">
-					
+						<div id=""
 						<b>Selecciona especialista:</b>
 						<select ng-model="vm.newCita.medico">
-				  			<option  ng-repeat="medico in ml.medicos" value={{mc.medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
+				  			<option  ng-repeat="medico in ml.medicos" ng-model="" value="{{medico}}">{{medico.nombre}} {{medico.especialidad}}</option>
 						</select>
-						</div>
 				</div>
 					<div id="botoncita">
-				   <button type="submit" id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
+				   <button type="submit" id="botonlog" class="btn btn-large btn-success" >Concertar cita</button>    
 				    </div>   
 				    
 				</form>

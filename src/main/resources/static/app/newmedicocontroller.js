@@ -17,6 +17,6 @@ function NewMedicoController(medicoManager, $location) {
 		medicoManager.newMedico(newMedico);
 		
 		mm.newMedico = {};
-		$location.path("/");
+		$location.path("/paneladmin");
 	};
 };

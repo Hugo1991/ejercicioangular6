@@ -177,6 +177,10 @@
 				<h3> Nuevo Medico</h3>
                     <form ng-submit="mm.addMedico(mm.newMedico)" class="registration-form">
                     	<div class="form-group">
+                        	<label class="sr-only" for="form-email">N&uacute;mero de colegiado</label>
+                        	<input type="text" name="form-email" ng-model="mm.newMedico.nColegiado" placeholder="Numero de colegiados..." class="form-email form-control" id="form-email">
+                        </div>
+                    	<div class="form-group">
                     		<label class="sr-only" for="form-first-name" label="nombre">Nombre</label>
                         	<input  type="text" name="form-first-name" ng-model="mm.newMedico.nombre" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
                         </div>
@@ -185,11 +189,8 @@
                         	<input type="text" name="form-last-name" ng-model="mm.newMedico.apellidos" placeholder="Apellidos..." class="form-last-name form-control" id="form-last-name">
                         </div>
                        
+                        
                         <div class="form-group">
-                        	<label class="sr-only" for="form-email">N�mero de colegiados</label>
-                        	<input type="text" name="form-email" ng-model="mm.newMedico.nColegiado" placeholder="Numero de colegiados..." class="form-email form-control" id="form-email">
-                                 </div>
-                                 <div class="form-group">
                     		<label class="sr-only" for="form-first-name" label="DNI">Especialidad</label>
                         	<input type="text" name="form-dni" ng-model="mm.newMedico.especialidad" placeholder="Especialidad..." class="form-first-name form-control" id="form-first-name">
                         </div>

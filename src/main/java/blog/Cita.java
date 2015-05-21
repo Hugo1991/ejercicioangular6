@@ -37,6 +37,11 @@ public class Cita {
 		setHospital(hospital);
 		setMedico(medico);
 	}
+	public Cita(String fecha,Hospital hospital,Medico medico){
+		setFecha(fecha);
+		setHospital(hospital);
+		setMedico(medico);
+	}
 	public void setUsuario(Usuario usuario){
 		this.usuario=usuario;
 	}

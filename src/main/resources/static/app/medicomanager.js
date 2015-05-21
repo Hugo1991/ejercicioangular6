@@ -52,7 +52,7 @@ function medicoManager($resource, $timeout) {
 	}
 
 	function newMedico(newMedico) {
-		new MedicoResource(newUsuario).$save(function(medico) {
+		new MedicoResource(newMedico).$save(function(medico) {
 			medicos.push(medico);
 		});
 	}
