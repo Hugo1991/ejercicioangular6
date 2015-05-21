@@ -435,7 +435,7 @@ h4{
     margin-top:23px;
 }
 .btn-cita:hover{
-    background-image: url()
+    
 }
 #contenedor-crearcitas{
     background-color: azure;
@@ -447,4 +447,14 @@ h4{
     opacity: 0.75;
     box-shadow: 5px 10px 30px 15px;
     z-index: -2;
+}
+
+.img-perfil{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+#cuerpo{
+    margin-top: 5px;
 }

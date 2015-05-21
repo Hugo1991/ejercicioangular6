@@ -14,15 +14,14 @@
                     <div class="navbar-collapse collapse">
 
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#/" class="smothscroll">Home</a></li>
-  		            <li style="float:right;"><button class="btn" data-toggle="modal" data-target="#popupregistro">Login</button></li>
-                           <li style="float:right;"><a href="#/registro" data-toggle="modal" >Registro</a></li>
+  		            		<li style="float:right;"><button class="btn" data-toggle="modal" data-target="#popuplogout">Salir</button></li>
+                            <li style="float:right;"><a href="#/perfilusuario" data-toggle="modal">Perfil</a>
+                            </li>
+                           
 
                     </div><!--/.nav-collapse -->
                   </div>
                 </div>
-                
-                
                 
 				<div class="header_top">
 
@@ -40,121 +39,157 @@
   		    <div class="navigation">
 				<nav>
                     <ul>
-                        <li><a href=""><span class=""><i class="icon "></i></span>Perfil/a></li>
-                        <li><a href=""><span class=""><i class="icon "></i></span>aasdsdsd</a>
-                            <ul>
-                                <li><a href="">asdsdsd</a></li>
-                                <li><a href="">asdsdsd</a></li>
-                                <li><a href="">asdsdsd</a></li>
-                            </ul>
-                        </li>
-                        <li><a href=""><span  class=""><i class="icon "></i></span>asdsdsd</a></li>
-                        <li><a href=""><span class=""><i class="icon "></i></span>asdsdsd</a></li>
-                        <li><a href=""><span class=""><i class="icon "></i></span>asdsdsd</a></li>
+                        <li onClick="mostrarHome()"><a href=""><span class=""><i class="icon "></i></span>Datos de Usuario</a></li>
+                        
+                        <li onClick="mostrarServicios()"><a href=""><span  class=""><i class="icon "></i></span>Servicios</a></li>
+                        <li onClick="mostrarFrecuentes()"><a href=""><span class=""><i class="icon "></i></span>Preguntas frecuentes</a></li>
                     </ul>
                 </nav>
-					 <span class="left-ribbon" ><img src="assets/img/left-fold.png"/> </span> 
-      				 <span class="right-ribbon" ><img src="assets/img/right-fold.png"/> </span>    
-  		    </div>
-
-   		</div>
-   		
-   		<div class="modal fade" id="popupregistro" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
-				<div class="modal-dialog"> <div class="modal-content"> 
-					<div class="modal-header"> 
-					
-						<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button> 
-							 </div> 
-							<div class="container"id="conten">
-							    <div class="row">
-							        <div class="col-sm-6 col-md-4 col-md-offset-4">
-							            <h1 class="text-center login-title">Entra con tu cuenta</h1>
-							            <div class="account-wall">
-							                <img class="profile-img" src="img/login.png"
-							                    alt="">
-							                <form class="form-signin">
-							                <input type="text"id="inputemail" class="form-control" placeholder="Email" required >
-							                <input type="password" class="form-control" placeholder="Password" required>
-							                <button class="btn btn-lg btn-primary btn-block" type="submit">
-							                    Entrar</button>
-							                <label class="checkbox pull-left">
-							                    <input type="checkbox" value="remember-me">
-							                    Recuerdame
-							                </label>
-							                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
-							                </form>
-							            </div>
-							            <a href="#" class="text-center new-account">Create una cuenta </a>
-							        </div>
-							    </div>
-							</div>
-                   </div>
+                <span class="left-ribbon" ><img src="assets/img/left-fold.png"/> </span> 
+      				 <span class="right-ribbon" ><img src="assets/img/right-fold.png"/> </span>
                     </div>
-                    
                 </div>
-               
         </div>
         <div id="cuerpo">
-            <div class="container-fluid imagen-centro" >
-<div class="row">
-                            <div class="col-md-2  cuerpo-buscar">
-                                <div class="container ">
-                                    <i class="glyphicon icon-buscar"></i><h4>Encuentra tu centro medico</h4>
-                                    <form class="contenedor-busqueda">
-                                        <div class="row">
-                                            <div class="form-group col-md-6 ">
-                                                <label for="option">Localidad</label>
-                                                <select class="form-control select-cuerpo" id="option">
-                                                    <option value="" > dasd</option>
-                                                    <option value="" >sadasd </option>
-                                                    <option value="" > asdas</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-6 ">
-                                                <label for="option">Especialidad</label>
-                                                <select class="form-control select-cuerpo" id="option">
-                                                    <option value="" >sad </option>
-                                                    <option value="" >sad </option>
-                                                    <option value="" > sdfsd</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">                    
-                                            <button class="btn center-block ">Buscar</button>
-                                        </div>                   
-                                        
-                                    </form> 
-
-                                </div>
-                            </div>
-                            <div class="col-md-4  cuerpo-buscar">
-                                <div class="container">
-                                    <i class="glyphicon icon-buscar"></i><h4>Informacion sobre hospital</h4>
-                                    <form class="contenedor-busqueda">
-                                        <div class="form-group">
-                                            <label for="option">Hospital</label>
-                                            <select class="form-control" id="option">
-                                                <option value="" > dasd</option>
-                                                <option value="" >sadasd </option>
-                                                <option value="" > asdas</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">                                  
-                                            <button class="btn center-block">Buscar</button>
-                                        </div>   
-                                    </form>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col-md-4">
+            <div id="datos-perfil">
+                <div class="container well">
+                    <div class="row">
+                        <div class="col-xs-8"><h2>Tu Perfil de Usuario</h2>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="../img/esperando.jpg" class="img-responsive" alt="no hay imagen">
+                        </div>
+                    </div>
+                    <br /><br />
+                     <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="formGroup">Nombre</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="text" id="formGroup" placeholder="Tu nombre" disabled>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="formGroup">Apellidos</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="text" id="formGroup" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="formGroup" id="tel">Teléfono</label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                                <input class="form-control" type="text" id="formGroup" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="formGroup" id="tel">Correo electrónico</label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon">@</span>
+                                <input class="form-control" type="text" id="formGroup" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="formGroup">Estado</label>
+                            <div class="col-sm-4">
+                                <select class="form-control">
+                                    <option>En línea</option>
+                                    <option>Ocupado</option>
+                                    <option>Ausente</option>
+                                    <option>Desconectado</option>    
+                                </select>
+                            </div>
+                        </div>
+                         <a href="/#/creacita"><button class="btn center-block" >Solicita tu cita</button></a>
+                    </form>
+                </div>
             </div>
-              <button><a href="/#/creacita"><button class="btn" >Solicita tu cita</button></a>
-            
-            <footer>
-
-            </footer>
+            <div class="col-md-12 col-md-offset-1" id="frecuentes"style="display:none;">
+				
+				<div class="container">
+                    <div class="peage-header">
+                        <h2>Puedo solicitar cita sanitaria online los 365 d&iacute;as del a&ntilde;o?</h2>
+                    </div>
+	                <p>S&iacute;. Dado que es un servicio web, este servicio est&aacute; activo 24 horas al d&iacute;a.
+	                </p>
+                </div>
+                
+                <div class="container">
+			        <div class="peage-header"><h2>C&oacute;mo puedo anular una cita?</h2>
+	              	     
+                    </div>
+	                <p>
+	                Entrando con tu perfil de usuario, busca la opci&oacuten; "anular cita"  
+	                </p>
+                </div>
+                
+                <div class="container">
+		                <div class="peage-header">
+                            <h2>Puedo modificar una cita ya confirmada para cambiar la fecha de consulta?           	</h2>
+                        </div>
+		              	<p>NO, si utilizas este servicio y quieres cambiar una cita, debes anular 
+		                la cita existente y solicitar una cita nueva.</p>            
+					</div>
+					
+				<div class="container">	
+					 <div class="peage-header">
+                         <h2>C&oacute;mo tengo que hacer para solicitar cita para dos personas diferentes?</h2>
+                         <p>La gesti&iacute;n de la citaci&oacute;n por Internet es un proceso individual 
+                             que exige que se introduzcan los datos de cada usuario para la reserva de la cita. Por lo 
+                             tanto, debe registrarse con 2 cuentas de usuario diferentes para que cada uno solicite su 
+                             correspondiente cita.</p>
+                    </div>	
+      
+				</div>
+            </div>
+            <div id="servicios" style="display:none;">
+			    <div class="container">
+                    <div class="raw">
+                        <div class="servic-med">
+                            <div class="col-md-3 col-xs-3">
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <div class="citamedica-print"><h2>Concerte su cita Medica</h2>
+                                    <a href="#/creacita"><button class="btn-cita"></button></a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <script type="text/javascript">
+            
+	        function mostrarHome() {
+	
+	            document.getElementById('servicios').style.display = 'none';
+	            document.getElementById('frecuentes').style.display = 'none';
+	            
+	
+	            document.getElementById('datos-perfil').style.display = 'block';
+	        }
+            function mostrarFrecuentes() {
+
+                document.getElementById('servicios').style.display = 'none';
+                document.getElementById('datos-perfil').style.display = 'none';
+                
+
+                document.getElementById('frecuentes').style.display = 'block';
+            }
+            function mostrarServicios() {
+
+                document.getElementById('frecuentes').style.display = 'none';
+                document.getElementById('datos-perfil').style.display = 'none';
+                
+
+                document.getElementById('servicios').style.display = 'block';
+            }
+            
+               
+
+               
+            </script>
+        <footer>    
+        </footer>
+    </div>
 </div>
