@@ -442,4 +442,9 @@ h4{
     opacity: 0.8;
     margin-top: 80px;
 }
-
+#frecuentes{
+    background-color: azure;
+    opacity: 0.75;
+    box-shadow: 5px 10px 30px 15px;
+    z-index: -2;
+}
