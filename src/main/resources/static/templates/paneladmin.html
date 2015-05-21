@@ -186,7 +186,7 @@
                         </div>
                        
                         <div class="form-group">
-                        	<label class="sr-only" for="form-email">Número de colegiados</label>
+                        	<label class="sr-only" for="form-email">Nï¿½mero de colegiados</label>
                         	<input type="text" name="form-email" ng-model="mm.newMedico.nColegiado" placeholder="Numero de colegiados..." class="form-email form-control" id="form-email">
                                  </div>
                                  <div class="form-group">
@@ -211,7 +211,7 @@
 				
 				<div id="frec">
 					<div  id="titulo"><a >
-	              	<b>¿Puedo solicitar cita sanitaria online los 365 d&iacuteas del a&ntildeo? </b>
+	              	<b>ï¿½Puedo solicitar cita sanitaria online los 365 d&iacuteas del a&ntildeo? </b>
 	                </a></div>
 	                <div id="respuesta">
 	                S&Iacute. Dado que es un servicio web, este servicio est&aacute activo 24 horas al d&iacutea.
@@ -220,7 +220,7 @@
                 
                 <div id="frec">
 			         <div id="titulo"><a >
-	              	¿C&oacutemo puedo anular una cita? 
+	              	ï¿½C&oacutemo puedo anular una cita? 
 	                </a></div>
 	                <div id="respuesta">
 	                Entrando con tu perfil de usuario, busca la opci&oacuten "anular cita"  
@@ -229,7 +229,7 @@
                 
                 <div id="frec">
 		                <div id="titulo"><a >
-		              	¿Puedo modificar una cita ya confirmada para cambiar la fecha de consulta? 
+		              	ï¿½Puedo modificar una cita ya confirmada para cambiar la fecha de consulta? 
 		              	</div>
 		              	<div id="respuesta">
 		                </a>NO, si utilizas este servicio y quieres cambiar una cita, debes anular 
@@ -239,10 +239,10 @@
 					
 				<div id="frec">	
 					 <div id="titulo"><a >
-	              	¿Cómo tengo que hacer para solicitar cita para dos personas diferentes? 
+	              	ï¿½Cï¿½mo tengo que hacer para solicitar cita para dos personas diferentes? 
 	                </a></div>
 	                <div id="respuesta">
-	                La gesti&oacuten de la citación por Internet es un proceso individual 
+	                La gesti&oacuten de la citaciï¿½n por Internet es un proceso individual 
 	                que exige que se introduzcan los datos de cada usuario para la 
 	                reserva de la cita.
 	                 Por lo tanto, debe registrarse con 2 cuentas de usuario diferentes 
@@ -300,7 +300,6 @@
                                     </TR>
                                 </table>
                        
-                        <button type="submit"ng-click="vm.deleteUsuario(vm.usuario)" class="btn">Borrar</button>
                 		<button><a href="/#/usuario/{{usuario.id}}"><button class="btn" >Ver</button></a>
 
                         </div>
@@ -344,15 +343,14 @@
                                         </TR>
                                     </thead>
                                     <TR>
-                                        <TD>{{medico.idMedico}}</TD>
+                                        <TD>{{medico.id}}</TD>
                                         <TD>{{medico.nColegiado}}</TD>
                                         <TD>{{medico.nombre}}</TD>
                                         <TD>{{medico.apellidos}}</TD>
                                         <TD>{{medico.especialidad}}</TD>
                                     </TR>
                                 </table>
-                                <button type="submit"ng-click="mm.deleteMedico(mm.medico)" class="btn">Borrar</button>
-                <button><a href="/#/medico/{{medico.idMedico}}"><button class="btn" >Ver</button></a>
+                <button><a href="/#/medico/{{medico.id}}"><button class="btn" >Ver</button></a>
                             </div>
                         </a>
                     </li>
@@ -393,7 +391,7 @@
                                         </TR>
                                     </thead>
                                     <TR>
-                                        <TD>{{hospital.idHospital}}</TD>
+                                        <TD>{{hospital.id}}</TD>
                                         <TD>{{hospital.nombre}}</TD>
                                         <TD>{{hospital.calle}}</TD>
                                         <TD>{{hospital.poblacion}}</TD>
@@ -401,8 +399,7 @@
                                         <TD>{{hospital.nTelefono}}</TD>
                                     </TR>
                                 </table>
-                                <button type="submit"ng-click="vm.deleteHospital(vm.hospital)" class="btn">Borrar</button>
-                <button><a href="/#/hospital/{{hospital.idHospital}}"><button class="btn" >Ver</button></a>
+                <button><a href="/#/hospital/{{hospital.id}}"><button class="btn" >Ver</button></a>
                             </div>
                     </li>
                 </ul>
@@ -449,7 +446,6 @@
                                      
                                     </TR>
                                 </table>
-                                <button type="submit"ng-click="vm.deleteCita(vm.cita)" class="btn">Borrar</button>
                 <button><a href="/#/cita/{{cita.id}}"><button class="btn" >Ver</button></a>
                         
                         </div>

@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Hospital {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idHospital;
+	private long id;
 	
 	private String nombre;
 	private String calle;
@@ -41,8 +41,8 @@ public class Hospital {
 	public void setTelefono(long nTelefono){
 		this.nTelefono=nTelefono;
 	}
-	public long getIdHospital(){
-		return idHospital;
+	public long getid(){
+		return id;
 	}
 	public String getNombre(){
 		return nombre;

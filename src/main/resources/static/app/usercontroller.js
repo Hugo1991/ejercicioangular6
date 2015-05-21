@@ -23,6 +23,7 @@ function UserController(usuarioManager, $routeParams, $location, LxNotificationS
 				{ cancel:'Cancelar', ok:'Eliminar' }, 
 				function(answer)
 		        {
+		        console.log(usuario);
 		            if(answer === true){
 		            	usuarioManager.deleteUsuario(usuario);
 		        		$location.path("/paneladmin");		            	

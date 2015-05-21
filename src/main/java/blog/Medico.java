@@ -12,7 +12,7 @@ public class Medico {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idMedico;
+	private long id;
 	
 	private long nColegiado;
 	private String nombre;
@@ -56,8 +56,8 @@ public class Medico {
 	}
 
 
-	public long getIdMedico() {
-		return idMedico;
+	public long getId() {
+		return id;
 	}
 	public String getEspecialidad(){
 		return especialidad;

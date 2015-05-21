@@ -45,6 +45,7 @@ function medicoManager($resource, $timeout) {
 	function getMedico(id) {
 		for (var i = 0; i < medicos.length; i++) {
 			if (medicos[i].id.toString() === id) {
+				console.log(medicos[i]);
 				return medicos[i];
 			}
 		}

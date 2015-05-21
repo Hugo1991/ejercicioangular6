@@ -23,6 +23,7 @@ function HospitalController(hospitalManager, $routeParams, $location, LxNotifica
 				{ cancel:'Cancel', ok:'Delete' }, 
 				function(answer)
 		        {
+		        	console.log(hospital);
 		            if(answer === true){
 		            	hospitalManager.deleteHospital(hospital);
 		        		$location.path("/");		            	

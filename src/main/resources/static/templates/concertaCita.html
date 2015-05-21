@@ -26,29 +26,29 @@
      <div id="selechos">
     
       <h1><b> Concerta tu cita</b></h1>
-		<form ng-submit="vm.addCita(vm.newCita)>
-		Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita"  name="fecha"></br></br>
-		
-		
-		
-		
+		<form ng-submit="vm.addCita(vm.newCita)">
+		Selecciona tu fecha <input type="date" ng-model="vm.newCita.fechaCita" name="fecha"></br></br>
 		<div ng-controller="HospitalListController as hm">
-		<b>Selecciona hospital:</b><select ng-model="vm.newCita.hospital" >
-		    <option selected>Elije hospital</option>
+		<b>Selecciona hospital:</b>
+		<select ng-model="vm.newCita.hospital" >
 		  	<option ng-repeat="hospital in hm.hospitales" value={{hospital}}>{{hospital.nombre}}</option>
 		</select>
 		</div>
 		</div> 
 		<div id="seleces">
 			<div id="minies">
-		
-				<div ng-controller="MedicoListController as mm">
-				<b>Selecciona especialista:</b><select ng-model="vm.newCita.medico">
-				    <option selected>Elije especialidad</option>
-				  <option ng-repeat="medico in mm.medicos" value={{medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
-				</select></div>
+								<div ng-controller="MedicoController as ml">
+
+				<div ng-controller="MedicoListController as ml">
+					
+						<b>Selecciona especialista:</b>
+						<select ng-model="vm.newCita.medico">
+				  			<option  ng-repeat="medico in ml.medicos" value={{mc.medico}}>{{medico.nombre}} {{medico.especialidad}}</option>
+						</select>
+						</div>
+				</div>
 					<div id="botoncita">
-				   <button id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
+				   <button type="submit" id="botonlog" class="btn btn-large btn-success" ng-disabled="forma.$invalid">Concertar cita</button>    
 				    </div>   
 				    
 				</form>
