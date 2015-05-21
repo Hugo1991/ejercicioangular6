@@ -18,6 +18,6 @@ function NewCitaController(citaManager, $location) {
 		
 		vm.newCita = {};
 		console.log(newCita);
-		$location.path("/");
+		$location.path("/citacompleta");
 	};
 };

@@ -1,7 +1,3 @@
-
-
-
-
 package blog;
 
 
@@ -21,14 +17,14 @@ public class Cita {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	@ManyToOne
-	@JoinColumn (name="idUsuario")
+	@JoinColumn (name="usuario.id")
 	private Usuario usuario;
 	@ManyToOne
-	@JoinColumn (name="idMedico")
+	@JoinColumn (name="medico.id")
 	private Medico medico;
 	private String fechaCita;
 	@ManyToOne
-	@JoinColumn (name="idHospital")
+	@JoinColumn (name="hospital.id")
 	private Hospital hospital;
 	public Cita(){}
 	public Cita(Usuario usuario,String fecha,Hospital hospital,Medico medico){
