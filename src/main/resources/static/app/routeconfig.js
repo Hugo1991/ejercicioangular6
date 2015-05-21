@@ -17,7 +17,7 @@ function RouteConfig($routeProvider) {
 	$routeProvider.when('/usuario/:id', { templateUrl : "templates/usuario.html" });
 	
 	$routeProvider.when('/cita/:id', { templateUrl : "templates/cita.html" });
-	$routeProvider.when('/post/:id', { templateUrl : "templates/post.html" });
+	$routeProvider.when('/registrocompleto/:id', { templateUrl : "templates/registroCompleto.html" });
 	$routeProvider.when('/medico/:id', { templateUrl : "templates/medico.html" });
 	$routeProvider.when('/hospital/:id', { templateUrl : "templates/hospital.html" });
 	
