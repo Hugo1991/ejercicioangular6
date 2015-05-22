@@ -25,12 +25,20 @@ public class DataBaseUsage implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		
 		 // save a couple of customers
-		Hospital h=new Hospital("ramon y cajal","ramon y cajal","Madrid","España",915765456);
-        Medico m=new Medico(918276l, "Doctor florencio", "Magdalenas Martinez", "Doctorcito Malcorazon");
-        Usuario u=new Usuario("hugo", "fernnandez", "02-02-1991", "hugofernandezvisier@gmail.com", "49100755", "123456789");
+		Medico m=new Medico(822287l, "Doctor Jacobo", "Fernandez Lopez", "Cirujano");
+		medicos.save(m);
+		medicos.save(new Medico(7182757l, "Doctora Rosa", "Alcantara Martinez", "Dentista"));
+		medicos.save(new Medico(618336l, "Doctor Alvaro", "Castellano Novillo", "Primaria"));
+
+
+
+		Hospital h=new Hospital("Gregorio Marañon","C/ Doctor Esquerdo, 46","Madrid","España",915868000);
 		hospitales.save(h);
-        medicos.save(m);
-        medicos.save(new Medico(100276l, "Doctor Down", "de carrito", "dentista"));
+		hospitales.save(new Hospital("La Paz","Pº de la Castellana, 261","Madrid","España",917277000));
+		hospitales.save(new Hospital("12 de Octubre","Avda de Córdoba s/n","Madrid","España",913908000));
+        Usuario u=new Usuario("49100755","hugo", "fernnandez", "02-02-1991", "hugofernandezvisier@gmail.com", "123456789");
+		
+        
         usuarios.save(u);
         Cita c=new Cita(u,"07-02-1991",h,m);
         citas.save(c);

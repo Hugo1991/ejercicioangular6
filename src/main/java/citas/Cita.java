@@ -29,19 +29,19 @@ public class Cita {
 	public Cita(){}
 	public Cita(Usuario usuario,String fechaCita,Hospital hospital,Medico medico){
 		setUsuario(usuario);
-		setFecha(fechaCita);
+		setFechaCita(fechaCita);
 		setHospital(hospital);
 		setMedico(medico);
 	}
 	public Cita(String fechaCita,Hospital hospital,Medico medico){
-		setFecha(fechaCita);
+		setFechaCita(fechaCita);
 		setHospital(hospital);
 		setMedico(medico);
 	}
 	public void setUsuario(Usuario usuario){
 		this.usuario=usuario;
 	}
-	public void setFecha(String fechaCita){
+	public void setFechaCita(String fechaCita){
 		this.fechaCita=fechaCita;
 	}
 	public void setHospital(Hospital hospital){

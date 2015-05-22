@@ -1,4 +1,4 @@
-<div ng-app>    
+<div ng-app ng-controller="UserController as uc">    
     <div id="navigation" class="navbar navbar-default navbar-fixed-top">  
         <div class="container">   
             <div class="navbar-header">
@@ -27,7 +27,7 @@
                             <form class="form-group" ng-submit="vm.addCita(vm.newCita)">
                                 <div class="form-group">
                                     <label >Introduce la fecha </label>
-                                    <input type="text" placeholder="dd-mm-aa" ng-model="vm.newCita.fechaCita" name="fecha">
+                                    <input type="text" placeholder="dd-mm-aa" ng-model="vm.newCita.fechaCita"/>
                                 </div>
                             
                                 <div class="form-group">
@@ -59,8 +59,8 @@
                                     <div class="row">
                                         <div class="col-sm-6 ">
                                             <strong><h2 >Datos de hospital</h2></strong>
-                                            <strong><h3>Nombre: {{uc.usuario.nombre}}</h3></strong>
-                                            <strong><h3>Calle: {{uc.usuario.apellidos}}</h3></strong>
+                                            <strong><h3>Nombre: {{hc.hospital.nombre}}</h3></strong>
+                                            <strong><h3>Calle: {{hc.hospital.calle}}</h3></strong>
                                             <strong><h3>Poblacion: {{uc.usuario.DNI}}</h3></strong>
                                             <strong><h3>Pais: {{uc.usuario.fechaNac}}</h3></strong>
                                             <strong><h3>Numero de telefono: {{uc.usuario.email}}</h3></strong>
@@ -77,4 +77,4 @@
             </div>
         </div>
     </div>
-
+</div>

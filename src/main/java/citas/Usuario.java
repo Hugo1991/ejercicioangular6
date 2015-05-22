@@ -13,7 +13,7 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String DNI;
+	private String dni;
 	private String nombre;
 	private String apellidos;
 	private String fechaNac;
@@ -21,16 +21,16 @@ public class Usuario {
 	private String pass;
 	
 	public Usuario(){}
-	public Usuario(String nombre,String apellidos,String fecha,String email,String dni,String pass){
-		setDNI(DNI);
+	public Usuario(String dni,String nombre,String apellidos,String fecha,String email,String pass){
+		setDni(dni);
 		setNombre(nombre);
 		setApellidos(apellidos);
 		setFechaNac(fecha);
 		setEmail(email);
 		setPass(pass);
 	}
-	public void setDNI(String dni){
-		this.DNI=dni;
+	public void setDni(String dni){
+		this.dni=dni;
 	}
 	public void setNombre(String nombre){
 		this.nombre=nombre;
@@ -50,9 +50,7 @@ public class Usuario {
 	public Long getId(){
 		return id;
 	}
-	public String getDNI(){
-		return DNI;
-	}
+	
 	public String getNombre(){
 		return nombre;
 	}
@@ -64,6 +62,9 @@ public class Usuario {
 	}
 	public String getEmail(){
 		return email;
+	}
+	public String getDni(){
+		return dni;
 	}
 	public String getPass(){
 		return pass;
