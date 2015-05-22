@@ -32,8 +32,7 @@
                             
                                 <div class="form-group">
                                     <label for="option">Selecciona hospital:</label>
-                                    <select  class="form-group" ng-model="vm.newCita.hospital">
-                                        <option  ng-repeat="hospital in hm.hospitales" value="{{hospital}}">{{hospital.nombre}}</option>
+                                    <select  class="form-group" ng-model="vm.newCita.hospital" ng-options="hospital.nombre for hospital in hm.hospitales">
                                     </select>
                                 </div>
                                 
@@ -42,8 +41,7 @@
                             <div ng-controller="MedicoListController as ml">
                                 <div class="form-group">
                                     <label for="option">Selecciona especialista:</label> 
-                                    <select class="form-group" ng-model="vm.newCita.medico">
-                                        <option  ng-repeat="medico in ml.medicos" value="{{medico}}">{{medico.nombre}} {{medico.especialidad}}</option>
+                                    <select class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre for medico in ml.medicos">
                                     </select>
                                 </div>
                             </div>

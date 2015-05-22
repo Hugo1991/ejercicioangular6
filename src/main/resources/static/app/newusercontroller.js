@@ -16,6 +16,8 @@ function NewUserController(usuarioManager, $location) {
 		usuarioManager.newUsuario(newUsuario);
 		
 		vm.newUsuario = {};
-		$location.path("/registrocompleto/vm.newUsuario");
+		console.log(vm.newUsuario);
+		console.log(NewUserController.usuario);
+		$location.path("/registrocompleto/"+NewUserController.id);
 	};
 };

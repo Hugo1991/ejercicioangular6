@@ -27,22 +27,22 @@ public class Cita {
 	@JoinColumn (name="hospital.id")
 	private Hospital hospital;
 	public Cita(){}
-	public Cita(Usuario usuario,String fecha,Hospital hospital,Medico medico){
+	public Cita(Usuario usuario,String fechaCita,Hospital hospital,Medico medico){
 		setUsuario(usuario);
-		setFecha(fecha);
+		setFecha(fechaCita);
 		setHospital(hospital);
 		setMedico(medico);
 	}
-	public Cita(String fecha,Hospital hospital,Medico medico){
-		setFecha(fecha);
+	public Cita(String fechaCita,Hospital hospital,Medico medico){
+		setFecha(fechaCita);
 		setHospital(hospital);
 		setMedico(medico);
 	}
 	public void setUsuario(Usuario usuario){
 		this.usuario=usuario;
 	}
-	public void setFecha(String fecha){
-		this.fechaCita=fecha;
+	public void setFecha(String fechaCita){
+		this.fechaCita=fechaCita;
 	}
 	public void setHospital(Hospital hospital){
 		this.hospital=hospital;
@@ -56,7 +56,7 @@ public class Cita {
 	public Usuario getUsuario(){
 		return usuario;
 	}
-	public String getFecha(){
+	public String getFechaCita(){
 		return fechaCita;
 	}
 	public Hospital getHospital(){
