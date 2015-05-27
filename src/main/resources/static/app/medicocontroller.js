@@ -18,9 +18,9 @@ function MedicoController(medicoManager, $routeParams, $location, LxNotification
 	
 	mm.deleteMedico = function(medico) {
 		
-		LxNotificationService.confirm('Delete confirmation',
-				'Are you sure you want to delete this post?', 
-				{ cancel:'Cancel', ok:'Delete' }, 
+		LxNotificationService.confirm('Confirmar Borrado',
+				'¿Seguro que quiere borrar el medico?', 
+				{ cancel:'Cancelar', ok:'Borrar' }, 
 				function(answer)
 		        {
 		            if(answer === true){
@@ -31,9 +31,9 @@ function MedicoController(medicoManager, $routeParams, $location, LxNotification
 	};
 	mm.updateMedico = function(medico) {
 		
-		LxNotificationService.confirm('Delete confirmation',
-				'Are you sure you want to update this post?', 
-				{ cancel:'Cancelar', ok:'actualizar' }, 
+		LxNotificationService.confirm('Confirmar Actualizacion',
+				'¿Esta seguro que quiere actualizar el medico?', 
+				{ cancel:'Cancelar', ok:'Actualizar' }, 
 				function(answer)
 		        {
 		            if(answer === true){

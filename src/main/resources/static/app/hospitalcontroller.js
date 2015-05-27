@@ -18,9 +18,9 @@ function HospitalController(hospitalManager, $routeParams, $location, LxNotifica
 	
 	vm.deleteHospital = function(hospital) {
 		
-		LxNotificationService.confirm('Delete confirmation',
-				'Are you sure you want to delete this post?', 
-				{ cancel:'Cancel', ok:'Delete' }, 
+		LxNotificationService.confirm('Confirmar Borrado',
+				'¿Seguro que quiere eliminar este hospital?', 
+				{ cancel:'Cancelar', ok:'Borrar' }, 
 				function(answer)
 		        {
 		        	console.log(hospital);

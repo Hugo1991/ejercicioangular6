@@ -18,7 +18,7 @@ function UserController(usuarioManager, $routeParams, $location, LxNotificationS
 	
 	vm.deleteUsuario = function(usuario) {
 		
-		LxNotificationService.confirm('Confirma tu deseo',
+		LxNotificationService.confirm('Confirmar Borrado',
 				'¿Estas seguro de que quieres eliminar este usuario?', 
 				{ cancel:'Cancelar', ok:'Eliminar' }, 
 				function(answer)
@@ -26,6 +26,20 @@ function UserController(usuarioManager, $routeParams, $location, LxNotificationS
 		        console.log(usuario);
 		            if(answer === true){
 		            	usuarioManager.deleteUsuario(usuario);
+		        		$location.path("/paneladmin");		            	
+		            }					
+		        });
+	};
+	vm.updateUsuario = function(usuario) {
+		
+		LxNotificationService.confirm('Confirmar Actualizacion',
+				'¿Estas seguro de que quieres actualizar este usuario?', 
+				{ cancel:'Cancelar', ok:'Actualizar' }, 
+				function(answer)
+		        {
+		        console.log(usuario);
+		            if(answer === true){
+		            	usuarioManager.updateUsuario(usuario);
 		        		$location.path("/paneladmin");		            	
 		            }					
 		        });
