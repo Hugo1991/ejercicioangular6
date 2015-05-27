@@ -1,33 +1,25 @@
 <div ng-controller="HospitalController as mm">
-<div class="content">
-
-</div>
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    
-                    <div class="container" id="conten">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <strong><h1 >Datos de hospital</h1></strong>
-                                <strong><h3>Nombre: {{mm.hospital.nombre}}</h3></strong>
-                               	<strong><h3>Calle: {{mm.hospital.calle}}</h3></strong>
-                               	<strong><h3>Poblacion: {{mm.hospital.poblacion}}</h3></strong>
-                               	<strong><h3>Pais: {{mm.hospital.pais}}</h3></strong>
-                               	<strong><h3>Numero de telefono: {{mm.hospital.nTelefono}}</h3></strong>
-                               	
-									<div class="toolbar__left mr">
-							           <button class="btn btn--m btn--blue btn--raised"> 
-							           		<a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
-							                	<i class="mdi mdi--arrow-back"></i>
-							            		</a>
-							            </button>
-							        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-
-        </div>
-	
+	<div class="content">
+	</div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="container" id="conten">
+				<div class="row">
+					<div class="col-md-12">
+						<strong><h1 >Datos de hospital</h1></strong>
+						<h3>Nombre: <input type="text" value={{mm.hospital.nombre}}></input></h3>
+						<h3>Calle: <input type="text" value={{mm.hospital.calle}}></input></h3>
+						<h3>Poblacion: <input type="text" value={{mm.hospital.poblacion}}></input></h3>
+						<h3>Pais: <input type="text" value={{mm.hospital.pais}}></input></h3>
+						<h3>Numero de telefono: <input type="text" value={{mm.hospital.nTelefono}}></input></h3>
+						<div class="toolbar__left mr">
+							<button class="btn btn--m btn--blue btn--raised"><a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
+								<i class="mdi mdi--arrow-back"></i>
+							</a></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

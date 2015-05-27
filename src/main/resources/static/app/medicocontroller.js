@@ -27,6 +27,19 @@ function MedicoController(medicoManager, $routeParams, $location, LxNotification
 		            	medicoManager.deleteMedico(medico);
 		        		$location.path("/paneladmin");		            	
 		            }					
-		        });
+				});
+	};
+	mm.updateMedico = function(medico) {
+		
+		LxNotificationService.confirm('Delete confirmation',
+				'Are you sure you want to update this post?', 
+				{ cancel:'Cancelar', ok:'actualizar' }, 
+				function(answer)
+		        {
+		            if(answer === true){
+		            	medicoManager.updateMedico(medico);
+		        		$location.path("/paneladmin");		            	
+		            }					
+				});
 	};
 };

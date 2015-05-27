@@ -38,5 +38,9 @@ public class MedicoController {
 	public Medico mostrarMedico(@PathVariable Long id) {
 		return medicoRepository.findOne(id);
 	}
-
+	@RequestMapping(method = RequestMethod.PUT)
+	public void updateMedico(@RequestBody Medico medico) {
+		System.out.println(medico.getNombre());
+		//medicoRepository.findOne(medico.getId()).setApellidos("pepe");
+	}
 }

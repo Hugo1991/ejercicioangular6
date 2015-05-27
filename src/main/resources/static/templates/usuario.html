@@ -1,42 +1,29 @@
 <div ng-controller="UserController as uc">
-
-	
-
-<div class="content">
-	
-	
-</div>
-
-			
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    
-                    <div class="container" id="conten">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <strong><h1 >Datos de usuario</h1></strong>
-                                <strong><h3>Nombre: {{uc.usuario.nombre}}</h3></strong>
-                               	<strong><h3>Apellidos: {{uc.usuario.apellidos}}</h3></strong>
-                               	<strong><h3>DNI: {{uc.usuario.dni}}</h3></strong>
-                               	<strong><h3>Fecha de nacimiento: {{uc.usuario.fechaNac}}</h3></strong>
-                               	<strong><h3>Correo electr&oacutenico: {{uc.usuario.email}}</h3></strong>
-                               	<strong><h3>Contrase&ntildea: {{uc.usuario.pass}}</h3>		</strong>						
-                                		<div id="botonborrar"style="margin-left:225px;margin-bottom:10px">
-									<a  href="" type="submit" class="btn btn--m btn--blue btn--raised"
-										 margin-top: 2em;" ng-click="uc.deleteUsuario(uc.usuario)">Eliminar</a>
-										 
-									</div>
-									<div class="toolbar__left mr">
-							           <button class="btn btn--m btn--blue btn--raised"> <a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
-							                <i class="mdi mdi--arrow-back"></i>
-							            </a></button>
-							        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-
-        </div>
-	
+	<div class="content">
+	</div>
+    <div class="modal-dialog">
+    	<div class="modal-content">
+    		<div class="container" id="conten">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<strong><h1 >Datos de usuario</h1></strong>
+    					<h3>Nombre: <input type="text" value={{uc.usuario.nombre}}></input></h3>
+    					<h3>Apellidos: <input type="text" value={{uc.usuario.apellidos}}></input></h3>
+    					<h3>DNI: <input type="text" value={{uc.usuario.dni}}></input></h3>
+    					<h3>Fecha de nacimiento: <input type="text" value={{uc.usuario.fechaNac}}></input></h3>
+    					<h3>Correo electr&oacutenico: <input type="text" value={{uc.usuario.email}}></input></h3>
+    					<h3>Contrase&ntildea: <input type="text" value={{uc.usuario.pass}}>	</input></h3>			
+    					<div id="botonborrar"style="margin-left:225px;margin-bottom:10px">
+							<a href="" type="submit" class="btn btn--m btn--blue btn--raised" margin-top: 2em;" ng-click="uc.deleteUsuario(uc.usuario)">Eliminar</a>
+						</div>
+						<div class="toolbar__left mr">
+							<button class="btn btn--m btn--blue btn--raised"> <a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
+								<i class="mdi mdi--arrow-back"></i>
+							</a></button>
+						</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
 </div>

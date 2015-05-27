@@ -5,7 +5,6 @@ NewCitaController.$inject = ["citaManager", "$location"];
 function NewCitaController(citaManager, $location) {
 
 	var vm = this;
-	var a=true;
 	//View model properties
 	
 	vm.newCita = {};

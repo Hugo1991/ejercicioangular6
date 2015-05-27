@@ -1,46 +1,33 @@
 <div ng-controller="CitaController as cc">
-
-<div ng-controller="UserController as uc">
-	
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    
-                    <div class="container" id="conten">
-                        <div class="row">
-                            <div class="col-md-12">
-                            <strong><h1 >Datos de cita</h1></strong>
-                              <strong>   <h3>Usuario:</h3> </strong>
-								<h5><b>DNI</b> {{cc.cita.usuario.dni}}</h5>
-								<h5><b>Nombre</b> {{cc.cita.usuario.nombre}} {{cc.cita.usuario.apellidos}}</h5>
-								<h5><b>Fecha nacimiento</b> {{cc.cita.usuario.fechaNac}}</h5>
-								
-								<h3>Hospital</h3>
-								<h5><b>Nombre</b> {{cc.cita.hospital.nombre}}</h5>
-								<h5><b>Direccion</b> {{cc.cita.hospital.calle}} en {{cc.cita.hospital.poblacion}}, {{cc.cita.hospital.pais}}</h5>
-								<h5><b>N Telefono</b> {{cc.cita.hospital.nTelefono}}</h5>
-								
-								<h3>Medico</h3>
-								<h5><b>N Colegiado</b> {{cc.cita.medico.nColegiado}}</h5>
-								<h5><b>Nombre</b> {{cc.cita.medico.nombre}} {{cc.cita.medico.apellidos}}</h5>
-								<h5><b>Especialidad</b> {{cc.cita.medico.especialidad}}</h5>						
-                                		<div id="botonborrar"style="margin-left:225px;margin-bottom:10px">
-									<a  href="" type="submit" class="btn btn--m btn--blue btn--raised"
-										 margin-top: 2em;"  ng-click="cc.deleteCita(cc.cita)">Eliminar</a>
-										 
-									</div>
-									<div class="toolbar__left mr">
-							           <button class="btn btn--m btn--blue btn--raised"> <a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
-							                <i class="mdi mdi--arrow-back"></i>
-							            </a></button>
-							        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-
-        </div>
-	
-</div>
-	
+	<div class="modal-dialog">
+		<div class="modal-content"> 
+			<div class="container" id="conten">
+				<div class="row">
+					<div class="col-md-12">
+						<strong><h1 >Datos de cita</h1></strong>
+						<strong>   <h3>Usuario:</h3> </strong>
+						<h5><b>DNI</b> {{cc.cita.usuario.dni}}</h5>
+						<h5><b>Nombre</b> {{cc.cita.usuario.nombre}} {{cc.cita.usuario.apellidos}}</h5>
+						<h5><b>Fecha nacimiento</b> {{cc.cita.usuario.fechaNac}}</h5>
+						<h3>Hospital</h3>
+						<h5><b>Nombre</b> {{cc.cita.hospital.nombre}}</h5>
+						<h5><b>Direccion</b> {{cc.cita.hospital.calle}} en {{cc.cita.hospital.poblacion}}, {{cc.cita.hospital.pais}}</h5>
+						<h5><b>N Telefono</b> {{cc.cita.hospital.nTelefono}}</h5>
+						<h3>Medico</h3>
+						<h5><b>N Colegiado</b> {{cc.cita.medico.nColegiado}}</h5>
+						<h5><b>Nombre</b> {{cc.cita.medico.nombre}} {{cc.cita.medico.apellidos}}</h5>
+						<h5><b>Especialidad</b> {{cc.cita.medico.especialidad}}</h5>						
+						<div id="botonborrar"style="margin-left:225px;margin-bottom:10px">
+							<a  href="" type="submit" class="btn btn--m btn--blue btn--raised" margin-top: 2em;"  ng-click="cc.deleteCita(cc.cita)">Eliminar</a>
+						</div>
+						<div class="toolbar__left mr">
+							<button class="btn btn--m btn--blue btn--raised"> <a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
+								<i class="mdi mdi--arrow-back"></i>
+							</a></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
