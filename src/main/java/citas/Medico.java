@@ -62,5 +62,8 @@ public class Medico {
 	public String getEspecialidad(){
 		return especialidad;
 	}
+	public void setId(Long id){
+		this.id=id;
+	}
 
 }

@@ -58,8 +58,8 @@ function usuarioManager($resource, $timeout) {
 		});
 	}
 
-	function updateUsuario(updatedUsuario) {
-		updatedUsuario.$update();
+	function updateUsuario(usuario) {
+		usuario.$update();
 	}
 
 	function deleteUsuario(usuario) {

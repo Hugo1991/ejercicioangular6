@@ -58,9 +58,7 @@ function medicoManager($resource, $timeout) {
 	}
 
 	function updateMedico(medico) {
-		console.log(MedicoResource);
-		medico.$update(function(){
-			medicos.update(medico)});
+		medico.$update();
 	}
 
 	function deleteMedico(medico) {

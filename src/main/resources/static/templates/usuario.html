@@ -6,21 +6,27 @@
     		<div class="container" id="conten">
     			<div class="row">
     				<div class="col-md-12">
-    					<strong><h1 >Datos de usuario</h1></strong>
-    					<h3>Nombre: <input type="text" value={{uc.usuario.nombre}}></input></h3>
-    					<h3>Apellidos: <input type="text" value={{uc.usuario.apellidos}}></input></h3>
-    					<h3>DNI: <input type="text" value={{uc.usuario.dni}}></input></h3>
-    					<h3>Fecha de nacimiento: <input type="text" value={{uc.usuario.fechaNac}}></input></h3>
-    					<h3>Correo electr&oacutenico: <input type="text" value={{uc.usuario.email}}></input></h3>
-    					<h3>Contrase&ntildea: <input type="text" value={{uc.usuario.pass}}>	</input></h3>			
+    					<form ng-submit="uc.updateUsuario(uc.usuario)" class="registration-form">
+    					
+    						<strong><h1 >Datos de usuario</h1></strong>
+    						<h3>Nombre: <input type="text" value={{uc.usuario.nombre}} ng-model="uc.usuario.nombre"></input></h3>
+    						<h3>Apellidos: <input type="text" value={{uc.usuario.apellidos}} ng-model="uc.usuario.apellidos"></input></h3>
+    						<h3>DNI: <input type="text" value={{uc.usuario.dni}} ng-model="uc.usuario.dni"></input></h3>
+    						<h3>Fecha de nacimiento: <input type="text" value={{uc.usuario.fechaNac}} ng-model="uc.usuario.fechaNac"></input></h3>
+    						<h3>Correo electr&oacutenico: <input type="text" value={{uc.usuario.email}} ng-model="uc.usuario.email"></input></h3>
+    						<h3>Contrase&ntildea: <input type="text" value={{uc.usuario.pass}} ng-model="uc.usuario.pass">	</input></h3>			
+    						<button type="submit" class="btn">actualizar</button>
+    					
+    					</form>
     					<div id="botonborrar"style="margin-left:225px;margin-bottom:10px">
 							<a href="" type="submit" class="btn btn--m btn--blue btn--raised" margin-top: 2em;" ng-click="uc.deleteUsuario(uc.usuario)">Eliminar</a>
 						</div>
+							
 						<div class="toolbar__left mr">
-							<button class="btn btn--m btn--blue btn--raised"> <a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
-								<i class="mdi mdi--arrow-back"></i>
-							</a></button>
-						</div>
+						<button class="btn btn--m btn--blue btn--raised"> <a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
+							<i class="mdi mdi--arrow-back"></i>
+						</a></button>
+					</div>
     				</div>
     			</div>
     		</div>

@@ -69,6 +69,9 @@ public class Usuario {
 	public String getPass(){
 		return pass;
 	}
+	public void setId(Long id){
+		this.id=id;
+	}
 	public void pedirCita(Medico medico,Date fecha){
 		
 	}

@@ -38,5 +38,10 @@ public class UsuarioController {
 	public Usuario getUsuario(@PathVariable Long id) {
 		return usuarioRepository.findOne(id);
 	}
+	@RequestMapping(value = "/{id}",method = RequestMethod.PUT)
+	public void updateUsuario(@PathVariable Long id,@RequestBody Usuario usuario) {
+		usuario.setId(id);
+		Usuario usu=usuarioRepository.saveAndFlush(usuario);
+	}
 
 }
