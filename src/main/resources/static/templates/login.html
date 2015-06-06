@@ -1,0 +1,13 @@
+<div ng-controller="LogController as mw" class="content">
+	<form  class="form-group" ng-submit="mw.login()">
+		<div class="form-group">
+			<label>Email: </label>
+			<input class="form-group"  type="email" ng-model="mw.maillog"  />
+		</div>
+		<div class="form-group">
+			<label> Contrase&ntilde;a : </label>
+			<input class="form-group" type="password" ng-model="mw.passlog"  />
+		</div>
+		<button id="submit"></button>
+	</form>
+</div>

@@ -19,6 +19,7 @@ public class Usuario {
 	private String fechaNac;
 	private String email;
 	private String pass;
+	private boolean admin;
 	
 	public Usuario(){}
 	public Usuario(String dni,String nombre,String apellidos,String fecha,String email,String pass){
@@ -29,6 +30,17 @@ public class Usuario {
 		setEmail(email);
 		setPass(pass);
 	}
+	public Usuario(String dni,String nombre,String apellidos,String fecha,String email,String pass,boolean admin){
+		setDni(dni);
+		setNombre(nombre);
+		setApellidos(apellidos);
+		setFechaNac(fecha);
+		setEmail(email);
+		setPass(pass);
+		this.admin=admin;
+	}
+	
+	
 	public void setDni(String dni){
 		this.dni=dni;
 	}
@@ -72,6 +84,15 @@ public class Usuario {
 	public void setId(Long id){
 		this.id=id;
 	}
+	
+	public boolean isAdmin(){
+		return this.admin;
+	}
+	
+	public boolean isAlta(){
+		return this.admin;
+	}
+	
 	public void pedirCita(Medico medico,Date fecha){
 		
 	}
