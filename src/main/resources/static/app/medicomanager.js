@@ -28,6 +28,7 @@ function medicoManager($resource, $timeout) {
 		newMedico: newMedico,
 		updateMedico : updateMedico,
 		deleteMedico : deleteMedico
+		
 	}
 
 	function reload(){
@@ -41,7 +42,7 @@ function medicoManager($resource, $timeout) {
 	function getMedicos() {
 		return medicos;
 	}
-
+	
 	function getMedico(id) {
 		for (var i = 0; i < medicos.length; i++) {
 			if (medicos[i].id.toString() === id) {

@@ -18,6 +18,7 @@ public class Medico {
 	private String nombre;
 	private String apellidos;
 	private String especialidad;
+	private boolean ocupado;
 	@ManyToOne
 	@JoinColumn (name="idHospital")
 	private Hospital hospital;
@@ -54,7 +55,13 @@ public class Medico {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
-
+	public void setOcupado(boolean ocupado){
+		this.ocupado=ocupado;
+	}
+	public boolean getOcupado(){
+		return ocupado;
+		
+	}
 
 	public long getId() {
 		return id;

@@ -20,7 +20,8 @@ function LogController(gs,$location,$routeParams){
 		
 		var valido = gs.login(vm.maillog,vm.passlog);
 		if(valido){
-		setTimeout(function(){$location.path("/perfilusuario");});
+			setTimeout(function(){$location.path("/perfilusuario");});
+			console.log(vm.maillog);
 		} else {
 			setTimeout(function(){$location.path("/");});
 		}
@@ -29,7 +30,7 @@ function LogController(gs,$location,$routeParams){
 	
 	vm.logout = function(){
 		gs.logout();
-		$location.path("/perfilusuario");
+		$location.path("/");
 		
 	}
 }

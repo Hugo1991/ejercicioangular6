@@ -1,4 +1,4 @@
-<div ng-app ng-controller="UserController as uc">    
+<div ng-app ng-controller="LogController as uc">    
 	<div id="navigation" class="navbar navbar-default navbar-fixed-top">  
 		<div class="container">   
 			<div class="navbar-header">
@@ -35,9 +35,10 @@
 							<div ng-controller="MedicoListController as ml">
 								<div class="form-group">
 									<label for="option">Selecciona especialista:</label> 
-									<select class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre for medico in ml.medicos"></select>
+									<select class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre for medico in ml.medicosLibres"></select>
 								</div>
 							</div>
+							<input type="text"  value={{uc.usuario}}/>
 							<div id="botoncita">
 								<button type="submit" id="botonlog" class="btn btn-large btn-success" >Concertar cita</button>    
 							</div> 

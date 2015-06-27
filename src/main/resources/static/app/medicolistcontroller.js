@@ -9,11 +9,10 @@ function MedicoListController(medicoManager, $location) {
 	//View model properties
 	
 	mm.medicos = []
-		
+	//mm.medicosLibres = []
 	//Controller logic
 	
 	mm.medicos = medicoManager.getMedicos();
-	
 	//Controller actions
 
 	mm.deleteMedico = function(medico) {

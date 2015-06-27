@@ -24,6 +24,7 @@ public class CitaController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
+		cita.getMedico().setOcupado(true);
 		citaRepository.save(cita);		
 		return new ResponseEntity<>(cita,HttpStatus.CREATED);
 	}
