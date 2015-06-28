@@ -26,7 +26,9 @@ function MedicoListController(medicoManager, $location) {
 	mm.reload = function(medico) {
 
 		medicoManager.reload().then(function(medicos){
-			mm.medicos = medicos;
+			 if(medico.ocupado==false){
+				mm.medicos = medicos;
+			}
 		});
 	};
 };

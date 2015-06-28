@@ -43,7 +43,7 @@ public class SesionController {
 	public void login(@RequestBody DatosSesion datos, HttpSession sesion){
 		for (Usuario usuario: usuarioRepository.findAll()) {
 			if (usuario.getEmail().equalsIgnoreCase(datos.mail) && usuario.getPass().equalsIgnoreCase(datos.pass)) {
-					if(usuario.isAlta()){
+					//if(usuario.isAlta()){
 						if(usuario.isAdmin()){
 							sesion.setAttribute("admin",true);
 						}else{
@@ -51,7 +51,7 @@ public class SesionController {
 						}
 						sesion.setAttribute("login",true);
 						sesion.setAttribute("persona",usuario);
-					}				
+					//}				
 			}
 			System.out.println(usuario.isAlta());
 		}		
