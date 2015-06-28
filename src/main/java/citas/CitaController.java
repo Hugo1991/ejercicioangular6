@@ -31,6 +31,7 @@ public class CitaController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void deleteCita(@PathVariable Long id) {
+		citaRepository.findOne(id).getMedico().setOcupado(false);
 		citaRepository.delete(id);
 	}
 

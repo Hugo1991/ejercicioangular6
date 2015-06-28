@@ -30,7 +30,7 @@ function LogController(gs,$location,$routeParams){
 	
 	vm.logout = function(){
 		gs.logout();
-		$location.path("/");
+		$location.path("/perfilusuario");
 		
 	}
 }

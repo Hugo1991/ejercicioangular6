@@ -30,6 +30,7 @@ public class Medico {
 		setNombre(nombre);
 		setApellidos(apellidos);
 		setEspecialidad(especialidad);
+		setOcupado(false);
 	}
 	public Long getnColegiado(){
 		return nColegiado;

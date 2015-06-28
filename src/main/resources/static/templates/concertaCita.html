@@ -35,10 +35,13 @@
 							<div ng-controller="MedicoListController as ml">
 								<div class="form-group">
 									<label for="option">Selecciona especialista:</label> 
-									<select class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre for medico in ml.medicosLibres"></select>
+									
+									<select  class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre for medico in ml.medicos">
+									
+									</select>
 								</div>
 							</div>
-							<input type="text"  value={{uc.usuario}}/>
+							
 							<div id="botoncita">
 								<button type="submit" id="botonlog" class="btn btn-large btn-success" >Concertar cita</button>    
 							</div> 

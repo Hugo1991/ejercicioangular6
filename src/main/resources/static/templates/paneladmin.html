@@ -223,7 +223,7 @@
 
             <div class="content">
 
-                <div ng-hide="vm.usuarios && vm.usuarios.length > 0" style="margin:20px">There are no posts yet.</div>
+                <div ng-hide="vm.usuarios && vm.usuarios.length > 0" style="margin:20px">No hay usuarios.</div>
 
                 <ul class="list">
                     <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="usuario in vm.usuarios">
@@ -270,12 +270,11 @@
             <div class="content">
 
 
-                <div ng-hide="mm.medicos && mm.medicos.length > 0" style="margin:20px">There are no posts yet.</div>
+                <div ng-hide="mm.medicos && mm.medicos.length > 0" style="margin:20px">No hay medicos disponibles.</div>
 
 
                 <ul class="list">
                     <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="medico in mm.medicos">
-                        <a href="/#/medico/{{medico.idMedico}}">
                             <div class="list-primary-tile">
                                 <i class="icon icon--l icon--blue icon--circled mdi mdi--insert-drive-file"></i>
                             </div>
@@ -301,7 +300,6 @@
                                 </table>
                 <a href="/#/medico/{{medico.id}}"><button class="btn" >Ver</button></a>
                             </div>
-                        </a>
                     </li>
                 </ul>
 				  <button style="margin-left:400px;"class="btn" data-toggle="modal" data-target="#popupnuevomedico">Nuevo medico</button>
@@ -313,7 +311,7 @@
 
             <div class="content">
 
-                <div ng-hide="vm.hospitales && vm.hospitales.length > 0" style="margin:20px">There are no posts yet.</div>
+                <div ng-hide="vm.hospitales && vm.hospitales.length > 0" style="margin:20px">No hay hospitales disponibles.</div>
 
                 <ul class="list">
                     <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="hospital in vm.hospitales">
@@ -353,7 +351,7 @@
             <div class="content">
 
 
-                <div ng-hide="vm.citas && vm.citas.length > 0" style="margin:20px">There are no posts yet.</div>
+                <div ng-hide="vm.citas && vm.citas.length > 0" style="margin:20px">No hay citas disponibles.</div>
 
                 <ul class="list">
                     <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="cita in vm.citas">
