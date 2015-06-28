@@ -1,5 +1,6 @@
-<div id="pag" ng-app>
-<div ng-controller="LogController as vm" ng-hide="vm.usuario.isAdmin==true">
+<div id="pag" ng-app ng-controller="LogController as sm">
+<div ng-hide="!sm.islog[1]">no eres admin</div>
+<div ng-show="sm.islog[1]">
     <div class="header">
         <div class="wrap">
             <div id="navigation" class="navbar navbar-default navbar-fixed-top">
@@ -392,7 +393,7 @@
 
             </div>
         </div>
-
+</div>
     </div>
 
 
