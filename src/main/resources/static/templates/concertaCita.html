@@ -1,3 +1,4 @@
+
 <div ng-app ng-controller="LogController as uc">    
 	<div id="navigation" class="navbar navbar-default navbar-fixed-top">  
 		<div class="container">   
@@ -23,12 +24,12 @@
 				<div clas="raw">
 					<div class="col-md-4">
 						<h1><b> Concerta tu cita</b></h1>
-						<form class="form-group" ng-submit="vm.addCita(vm.newCita)">
-							<input type="hidden" placeholder="{{uc.usuario}}" ng-model="vm.newCita.usuario"/>
+						<form class="form-group" name="cita" ng-submit="vm.addCita(vm.newCita)">
+							<input type="hidden" required  ng-init="vm.newCita.usuario=uc.usuario" id="usuario" name="usuario" ng-model="vm.newCita.usuario"/>
 							
 							<div class="form-group">
 								<label >Introduce la fecha </label>
-								<input type="text" placeholder="dd-mm-aa" ng-model="vm.newCita.fechaCita"/>
+								<input type="string"  placeholder="dd-mm-aa" ng-model="vm.newCita.fechaCita" />
 							</div>
 							<div class="form-group">
 								<label for="option">Selecciona hospital:</label>

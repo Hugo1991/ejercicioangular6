@@ -36,9 +36,9 @@ public class DataBaseUsage implements CommandLineRunner {
 		hospitales.save(h);
 		hospitales.save(new Hospital("La Paz","Pº de la Castellana, 261","Madrid","España",917277000));
 		hospitales.save(new Hospital("12 de Octubre","Avda de Córdoba s/n","Madrid","España",913908000));
-        Usuario u=new Usuario("49100755","hugo", "fernnandez", "02-02-1991", "hugofernandezvisier@gmail.com", "1234",true);
+        Usuario u=new Usuario("49100755x","Hugo", "Fernandez Visier", "02-02-1991", "hugofernandezvisier@gmail.com", "1234",true);
         usuarios.save(u);
-        usuarios.save(new Usuario("49100755","hugo", "fernnandez", "02-02-1991", "cruz@gmail.com", "1234",false));
+        usuarios.save(new Usuario("75632554j","Cruz Hector", "Fernandez", "08-12-1992", "cruz@gmail.com", "1234",false));
 		
         
         usuarios.save(u);
