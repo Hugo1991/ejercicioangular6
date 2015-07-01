@@ -25,6 +25,7 @@ public class DataBaseUsage implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		
 		 // save a couple of customers
+		
 		Medico m=new Medico(822287l, "Doctor Jacobo", "Fernandez Lopez", "Cirujano");
 		medicos.save(m);
 		medicos.save(new Medico(7182757l, "Doctora Rosa", "Alcantara Martinez", "Dentista"));

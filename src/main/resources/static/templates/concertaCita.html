@@ -29,17 +29,17 @@
 							
 							<div class="form-group">
 								<label >Introduce la fecha </label>
-								<input type="string"  placeholder="dd-mm-aa" ng-model="vm.newCita.fechaCita" />
+								<input type="string" required placeholder="dd-mm-aa" ng-model="vm.newCita.fechaCita" />
 							</div>
 							<div class="form-group">
 								<label for="option">Selecciona hospital:</label>
 								<select  class="form-group" ng-model="vm.newCita.hospital" ng-options="hospital.nombre for hospital in hm.hospitales"></select>
 							</div>
-							<div ng-controller="MedicoListController as ml">
+							<div ng-controller="MedicoListController as ml" >
 								<div class="form-group">
 									<label for="option">Selecciona especialista:</label> 
 									
-									<select  class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre for medico in ml.medicos">
+									<select class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre for medico in ml.medicos">
 									
 									</select>
 								</div>

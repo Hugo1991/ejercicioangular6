@@ -19,9 +19,6 @@ public class Medico {
 	private String apellidos;
 	private String especialidad;
 	private boolean ocupado;
-	@ManyToOne
-	@JoinColumn (name="idHospital")
-	private Hospital hospital;
 	public Medico() {
 	}
 
