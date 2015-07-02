@@ -43,8 +43,8 @@ public class DataBaseUsage implements CommandLineRunner {
 		
         
         usuarios.save(u);
-        Cita c=new Cita(u,"07-02-1991",h,m);
-        citas.save(c);
+        //Cita c=new Cita(u,("02-07-15"),h,m);
+        //citas.save(c);
 
        
         // fetch all customers

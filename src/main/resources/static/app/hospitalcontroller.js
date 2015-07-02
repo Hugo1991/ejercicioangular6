@@ -14,21 +14,5 @@ function HospitalController(hospitalManager, $routeParams, $location, LxNotifica
 	
 	vm.hospital = hospitalManager.getHospital($routeParams.id);
 
-	//Controller actions
-	
-	vm.deleteHospital = function(hospital) {
-		
-		LxNotificationService.confirm('Confirmar Borrado',
-				'¿Seguro que quiere eliminar este hospital?', 
-				{ cancel:'Cancelar', ok:'Borrar' }, 
-				function(answer)
-		        {
-		        	console.log(hospital);
-		            if(answer === true){
-		            	hospitalManager.deleteHospital(hospital);
-		        		$location.path("/");		            	
-		            }					
-		        });
-	};
 };
 

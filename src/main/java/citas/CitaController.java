@@ -25,7 +25,6 @@ public class CitaController {
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
 		cita.getMedico().setOcupado(true);
-		System.out.println("medico" + cita.getMedico().getOcupado());
 		citaRepository.save(cita);		
 		return new ResponseEntity<>(cita,HttpStatus.CREATED);
 	}
@@ -33,7 +32,6 @@ public class CitaController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void deleteCita(@PathVariable Long id) {
 		citaRepository.findOne(id).getMedico().setOcupado(false);
-		System.out.println("medico" + citaRepository.findOne(id).getMedico().getOcupado());
 		citaRepository.delete(id);
 	}
 

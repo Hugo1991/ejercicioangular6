@@ -25,9 +25,6 @@ function hospitalManager($resource, $timeout) {
 		reload : reload,
 		getHospitales : getHospitales,
 		getHospital : getHospital,		
-		newHospital : newHospital,
-		updateHospital : updateHospital,
-		deleteHospital : deleteHospital
 	}
 
 	function reload(){
@@ -49,21 +46,5 @@ function hospitalManager($resource, $timeout) {
 				return hospitales[i];
 			}
 		}
-	}
-
-	function newHospital(newHospital) {
-		new HospitalResource(newHospital).$save(function(hospital) {
-			hospitales.push(hospital);
-		});
-	}
-
-	function updateHospital(updatedHospital) {
-		updatedHospital.$update();
-	}
-
-	function deleteHospital(hospital) {
-		hospital.$remove(function() {
-			hospitales.splice(hospitales.indexOf(hospital), 1);
-		});
 	}	
 }

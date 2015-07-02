@@ -11,7 +11,7 @@
 							<strong><h1 >Datos de medico</h1></strong>
 							<h3>Nombre: <input type="text" value={{mm.medico.nombre}} ng-model="mm.medico.nombre"></input></h3>
 							<h3>Apellidos: <input type="text" value={{mm.medico.apellidos}} ng-model="mm.medico.apellidos"></input></h3>
-							<h3>Numero de colegiado: <input type="text" value={{mm.medico.nColegiado}}ng-model="mm.medico.nColegiado"></input></h3>
+							<h3>Numero de colegiado: <input type="text" value={{mm.medico.nColegiado}} ng-model="mm.medico.nColegiado"></input></h3>
 							<h3>Especialidad: <input type="text" value={{mm.medico.especialidad}} ng-model="mm.medico.especialidad"></input></h3>
 							<div id="botonborrar"style="margin-left:225px;margin-bottom:10px">
 								<a  href="" type="submit" class="btn btn--m btn--blue btn--raised" margin-top: 2em;" ng-click="mm.deleteMedico(mm.medico)">Eliminar</a>
@@ -19,9 +19,9 @@
 							<button type="submit" class="btn">actualizar</button>
 						</form>		
 						<div class="toolbar__left mr">
-							<button class="btn btn--m btn--blue btn--raised"> <a href="/#/paneladmin" class="btn btn--l btn--white btn--icon" lx-ripple>
+							<a href="#/paneladmin" class="btn btn--m btn--blue btn--raised" lx-ripple><button class="btn  btn--blue btn--raised"> 
 								<i class="mdi mdi--arrow-back"></i>
-							</a></button>
+							</button></a>
 						</div>
 							
 						

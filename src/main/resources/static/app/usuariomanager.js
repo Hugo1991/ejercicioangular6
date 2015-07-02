@@ -45,7 +45,6 @@ function usuarioManager($resource, $timeout) {
 	function getUsuario(id) {
 		for (var i = 0; i < usuarios.length; i++) {
 			if (usuarios[i].id.toString() === id) {
-				console.log(usuarios[i]);
 				return usuarios[i];
 			}
 		}
@@ -53,7 +52,6 @@ function usuarioManager($resource, $timeout) {
 
 	function newUsuario(newUsuario) {
 		new UsuarioResource(newUsuario).$save(function(usuario) {
-			console.log(usuario);
 			usuarios.push(usuario);
 		});
 	}
