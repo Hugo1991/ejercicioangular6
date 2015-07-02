@@ -1,6 +1,38 @@
 <div id="pag" ng-app ng-controller="LogController as sm">
-<div ng-hide="!sm.islog[1]">no eres admin</div>
-<div ng-show="sm.islog[1]">
+<div ng-show="!sm.islog[1]" >
+	<div class="header">
+        <div class="wrap">
+            <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#/"><b>NoInsane</b></a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+
+                        <ul class="nav nav-tabs">
+                            
+                         <li> <a href="#/" ><button id="micuenta" class="button btn btnBold">Volver</button></a></li>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+            <div class="header_top">
+
+                <div class="header_top_right">
+                    
+                </div>
+                <div class="clear"></div>
+            </div></div>
+        </div>
+        no eres administrador. 
+    </div>
+            
+<div ng-show="sm.islog[1]" ng-hide="!sm.islog[1]">
     <div class="header">
         <div class="wrap">
             <div id="navigation" class="navbar navbar-default navbar-fixed-top">
