@@ -44,6 +44,7 @@ public class Cita {
 		this.hospital=hospital;
 	}
 	public void setMedico(Medico medico){
+		
 		this.medico=medico;
 	}
 	public long getid(){

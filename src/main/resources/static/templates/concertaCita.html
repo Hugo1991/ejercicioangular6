@@ -39,7 +39,7 @@
 								<div class="form-group">
 									<label for="option">Selecciona especialista:</label> 
 									
-									<select class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre for medico in ml.medicos">
+									<select class="form-group" ng-model="vm.newCita.medico" ng-options="medico.nombre group by medico.ocupado  for medico  in ml.medicos">
 									
 									</select>
 								</div>

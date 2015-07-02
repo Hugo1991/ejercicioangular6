@@ -35,15 +35,6 @@ public class MedicoController {
 		
 		return medicoRepository.findAll();
 	}
-	/*@RequestMapping(method = RequestMethod.GET)
-	public List<Medico> mostrarMedicosLibres(Model model) {
-		List<Medico> medicosLibres = null;
-		for (Medico m:medicoRepository.findAll()){
-			if (m.getOcupado()==true)
-				medicosLibres.add(m);
-		}
-		return medicosLibres;
-	}*/
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public Medico mostrarMedico(@PathVariable Long id) {
